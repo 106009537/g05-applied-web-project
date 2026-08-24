@@ -4,10 +4,12 @@ COS10026 Web Technology Project
 Swinburne University, Semester 2 2026
 
 ## Live Site
-[GitHub Pages link]
+https://106009537.github.io/g05-applied-web-project/
+
 
 ## Jira Board
-[Jira link]
+https://g05-applied-web-project.atlassian.net?continue=https%3A%2F%2Fg05-applied-web-project.atlassian.net%2Fwelcome%2Fsoftware&atlOrigin=eyJpIjoiOThjYzRhYTkyYzBmNDkzMjgwZmRiYzQ2M2FmZmY1MzgiLCJwIjoiaiJ9
+
 
 ## Group Contributions: G05
 
