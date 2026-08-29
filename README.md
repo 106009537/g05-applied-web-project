@@ -31,3 +31,4 @@ https://g05-applied-web-project.atlassian.net?continue=https%3A%2F%2Fg05-applied
 
 ## GenAI Acknowledgement [We'll add any tools/prompts used, per unit requirements]
 1. Used Claude to format above Group Contributions Table
+2. Used ChatGPT to generate Job positions/details
