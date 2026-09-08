@@ -239,3 +239,19 @@ dd {
 ============================================= */
 
 
+#jobs-title {
+    color: rgb(0, 0, 0);
+}
+
+#jobs-info {
+    color: rgb(0, 0, 0);
+}
+
+.job-heading {
+    color: rgb(0, 0, 0);
+}
+
+.job-block{
+    color: black
+}
+
