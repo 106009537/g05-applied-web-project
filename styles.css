@@ -41,18 +41,27 @@ nav a {
     color: white;
     text-decoration: none;
 }
+
+nav a:hover {
+    background-color: #143A2F;
+}
+
 .donate-button {
     margin-left: 40px;
 
-    background-color: #AC7D32;
+    background-color: #C98A17;
     color: white;
     padding: 12px 25px;
     border-radius: 25px;
     text-decoration: none;
 }
 
+.donate-button:hover {
+    background-color: #A96F0D;
+}
+
 body {
-  background-color: lightgray;
+  background-color: white;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
@@ -268,6 +277,13 @@ dd {
     border-radius: 5px;
     text-decoration: none;
     margin-left: 20px;
+    font-weight: bold;
+    border-left: 5px solid rgb(102, 68, 5);
+}
+
+.apply-here:hover {
+    background-color: rgb(102, 68, 5);
+    border-left: 5px solid rgb(92, 61, 4);
 }
 
 .jobs-grid {
@@ -284,30 +300,41 @@ dd {
 
 .job-heading {
     margin: 0;
+    color: #1B4D3E;
 }
 
 #jobs-title {
     background-color: #1B4D3E;
+    border-left: 5px solid rgb(64, 87, 81);
     color: white;
     padding: 30px;
     border-radius: 10px;
     margin-bottom: 30px;
 }
 
-#jobs-info {
-    color: rgb(0, 0, 0);
-}
-
-.job-heading {
-    color: rgb(0, 0, 0);
-}
-
 .job-block{
-    background-color: #b0bdad;
-    color: black;
+    background-color: #cddbd7;
+    color: #313534;
     padding: 30px;
     margin-bottom: 30px;
     border-radius: 10px;
+    border-left: 5px solid #88aba1;
+}
+
+#jobs-title h1{
+    color: white;
+}
+
+#jobs-info {
+    background-color: #a7d4c7;
+    padding: 20px;
+    border-left: 5px solid #88aba1;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+#jobs-info h2 {
+    color: #1B4D3E;
 }
 
 .jobs-image {
