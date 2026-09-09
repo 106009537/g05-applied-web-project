@@ -63,13 +63,13 @@ nav a:hover {
 body {
   
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #d3d3d3;
+    background-color: #ffffff;
 
     background-image: url("images/sandy_pattern.png");
     background-repeat: repeat;
     background-size: 180px;
     }
-}
+
 
 
 
@@ -216,10 +216,24 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+    gap: 20px
 }
 
 #team article {
     width: 45%;
+    background-color: #cddbd7;
+    color: #313534;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #88aba1;
+}
+
+#team article h1 {
+    color: #1B4D3E;
+}
+
+#team article h2 {
+    color: #1B4D3E;
 }
 
 #team figure {
@@ -239,21 +253,52 @@ body {
     /* Maybe I should have done the floated elements with flexbox too*/
     justify-content: space-between; /* Makes space between child elements evenly */
     margin-top: 50px;
+    gap: 20px;
 }
 
 #team-details article {
     width: 45%;
+    background-color: #cddbd7;
+    color: #313534;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #88aba1;
+}
+
+#team-details article h2 {
+    color: #1B4D3E;
+}
+
+#team-details article h3 {
+    color: #1B4D3E;
 }
 
 #team-details table {
     width: 48%;
     border-collapse: collapse; /* Makes all the borders in the table collapse into a single border instead of having double borders */
+    background-color: #cddbd7;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 #team-details th,
 #team-details td {
     border: 1px solid black;
     padding: 15px;
+}
+
+#team-details thead th {
+    background-color: #1B4D3E;
+    color: white;
+}
+
+#team-details tbody th {
+    color: #1B4D3E;
+    background-color: #cddbd7;
+}
+
+#team-details tbody td {
+    color: #313534;
 }
 
 
