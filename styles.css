@@ -4,55 +4,51 @@ main {
     margin: 0 auto;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
 
-nav {
-    display: flex;
-    justify-content: space-around;
-
-    padding: 10px;
-
-    background-color: grey;
-/*  The below code stretches the nav to the full width of the viewport */
+header {
+    background-color: #002C18;
     width: 100vw; /*   100% of the viewport width */
     margin-left: calc(50% - 50vw); /* calc 50% of the viewport width and subtract 50% of the parent element's width to center the nav */
 }
 
-nav a {
-    color: black;
-    text-decoration: none;
+.header-content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px 0;
+
+    display: flex;
+    align-items: center;
 }
 
 .logo {
-    
-    padding: 0px;
-    margin-left: 5%;
-    width: auto;
-    height: 100px;
-    object-fit: contain;
-    
+    width: 180px;
+    height: auto;
 }
 
-.donate-button {
-    background-color: rgba(11, 58, 31, 0.815);
-    color: white;
-    padding: 15px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-right: 10%;
-}
-
-.header-top {
+nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    max-width: 1000px; /* Sets a maximum width for the main content area to ensure it doesn't stretch too wide on large screens */
-    margin: 0 auto;
-  
+    gap: 35px;
+    margin-left: auto;
 }
 
-header {
-    padding: 0px;
+nav a {
+    color: white;
+    text-decoration: none;
+}
+.donate-button {
+    margin-left: 40px;
+
+    background-color: #AC7D32;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
 }
 
 body {
@@ -60,6 +56,8 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
+
+
 
 /* =======================================================
         For the homepage
@@ -69,7 +67,7 @@ body {
 /* -------------------- */
 
 #introduction {
-    margin-top: 30px;
+    margin-top: 0;
 }
 
 #introduction figure {
@@ -77,7 +75,9 @@ body {
 }
 
 #introduction img {
+    display: block;
     width: 100%;
+    height: auto;
 }
 
 
@@ -253,3 +253,72 @@ dt {
 dd {
     margin-top: 5px;
 }
+
+
+
+/* =============================================
+       For the jobs page
+============================================= */
+
+.apply-here {
+    background-color: rgb(129, 86, 7);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.jobs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.job-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.job-heading {
+    margin: 0;
+}
+
+#jobs-title {
+    background-color: #1B4D3E;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+#jobs-info {
+    color: rgb(0, 0, 0);
+}
+
+.job-heading {
+    color: rgb(0, 0, 0);
+}
+
+.job-block{
+    background-color: #b0bdad;
+    color: black;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.jobs-image {
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.jobs-image img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
