@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="G05 recruitment website for an environmental conservation organisation.">
-  <title>Home - G05 Recruitment Website</title>
+  <meta name="author" content="Alisha"> 
+  <title>Apply - G05 Recruitment Website</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-      <header>
+    <header>
         <div class="header-content">
 
             <a href="index.html">
@@ -27,151 +28,124 @@
         </div>
     </header>
 
-  <main>
-    <h1>Apply</h1>
-    <p>This site is under construction.</p>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Job Application Form for G05 Recruitment Website">
-    <meta name="keywords" content="Environmental Conservation, Job Application, HTML, Form, G05 Recruitment">
-    <meta name="author" content="Alisha">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Application - G05 Recruitment Website</title>
-</head>
-<body>
-
-    <header>
-    <a href="index.html">
-        <img src="images/logo.png" alt="G05 Recruitment Logo">
-    </a>
-    <h1>G05 Recruitment</h1>
-</header>
-
-    <p>
-        Thank you for your interest in joining our team. Please complete the form below to apply for a position with us.
-    </p>
-    
     <main>
-        <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+        <h1>G05 Recruitment</h1>
+        <p>Thank you for your interest in joining our team. Please complete the form below to apply for a position with us.</p>
+        
+            <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
 
-            <!-- Personal & Position Details -->
-            <fieldset>
-                <legend>Personal &amp; Position Details</legend>
+                <!-- Personal & Position Details -->
+                <fieldset>
+                    <legend>Personal &amp; Position Details</legend>
 
+                    <p>
+                        <label for="jobref">Job Reference Number:</label>
+                        <input type="text" id="jobref" name="jobref" pattern="[A-Za-z0-9]{6}" maxlength="6" required="required">
+                    </p>
+
+                    <p>
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" maxlength="20" pattern="[A-Za-z]+" required="required">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" maxlength="20" pattern="[A-Za-z]+" required="required">
+                    </p>
+                    
+                    <p>
+                        <label for="dob">Date of Birth:</label>
+                        <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required="required">
+                    </p>
+
+                </fieldset>
+
+                <!-- Gender -->
+                <fieldset>
+                    <legend>Gender</legend>
+
+                    <p>
+                        <label><input type="radio" name="gender" value="Female" required="required"> Female</label>
+                        <label><input type="radio" name="gender" value="Male" required="required"> Male</label>
+                        <label><input type="radio" name="gender" value="Non-binary" required="required"> Non-binary</label>
+                        <label><input type="radio" name="gender" value="Prefer not to say" required="required"> Prefer not to say</label>
+                    </p>
+                </fieldset>
+
+                <!-- Address -->
+                <fieldset>
+                    <legend>Address</legend>
+
+                    <p>
+                        <label for="street">Street Address:</label>
+                        <input type="text" id="street" name="street" maxlength="40" required="required">
+                    </p>
+
+                    <p>
+                        <label for="suburb">Suburb/Town:</label>
+                        <input type="text" id="suburb" name="suburb" maxlength="40" required="required">
+                    </p>
+
+                    <p>
+                        <label for="state">State:</label>
+                        <select id="state" name="state" required="required">
+                        <option value="">Please Select</option>
+                            <option value="NSW">New South Wales</option>
+                            <option value="VIC">Victoria</option>
+                            <option value="QLD">Queensland</option>
+                            <option value="WA">Western Australia</option>
+                            <option value="SA">South Australia</option>
+                            <option value="TAS">Tasmania</option>
+                            <option value="NT">Northern Territory</option>
+                            <option value="ACT">Australian Capital Territory</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="postcode">Postcode:</label>
+                        <input type="text" id="postcode" name="postcode" maxlength="4" pattern="\d{4}" required="required">
+                    </p>
+                </fieldset>
+
+                <!-- Contact Details -->
+                <fieldset>              
+                    <legend>Contact Details</legend>
+
+                    <p>
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" maxlength="40" required="required">
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone Number:</label>
+                        <input type="text" id="phone" name="phone" pattern="\d{8,12}" required="required">
+                    </p>
+                </fieldset>
+
+                <!-- Skills -->
+                <fieldset>
+                    <legend>Skills</legend>
+
+                    <p>
+                        <label><input type="checkbox" name="skills[]" value="Field Research"> Field Research</label>
+                        <label><input type="checkbox" name="skills[]" value="Community Engagement"> Community Engagement</label>
+                        <label><input type="checkbox" name="skills[]" value="Data Analysis"> Data Analysis</label>
+                        <label><input type="checkbox" name="skills[]" value="Fundraising"> Fundraising</label>
+                        <label><input type="checkbox" name="skills[]" value="Volunteer Coordination"> Volunteer Coordination</label>
+                        <label><input type="checkbox" name="skills[]" value="Environmental Education"> Environmental Education</label>
+                    </p>
+
+                    <p>
+                        <label for="otherskills">Other Skills:</label><br>
+                        <textarea id="otherskills" name="otherskills" rows="4" cols="50" placeholder="Please specify any other relevant skills..."></textarea>
+                    </p>
+                </fieldset>
+
+                <!-- Form Actions -->
                 <p>
-                    <label for="jobref">Job Reference Number:</label>
-                    <input type="text" id="jobref" name="jobref" pattern="[A-Za-z0-9]{6}" maxlength="6" required="required">
+                    <input type="submit" value="Submit Application">
+                    <input type="reset" value="Clear form">
                 </p>
 
-                <p>
-                    <label for="fname">First Name:</label>
-                    <input type="text" id="fname" name="fname" maxlength="20" pattern="[A-Za-z]+" required="required">
-                    <label for="lname">Last Name:</label>
-                    <input type="text" id="lname" name="lname" maxlength="20" pattern="[A-Za-z]+" required="required">
-                </p>
-                
-                <p>
-                    <label for="dob">Date of Birth:</label>
-                    <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required="required">
-                </p>
-
-            </fieldset>
-
-            <!-- Gender -->
-            <fieldset>
-                <legend>Gender</legend>
-
-                <p>
-                    <label><input type="radio" name="gender" value="Female" required="required"> Female</label>
-                    <label><input type="radio" name="gender" value="Male" required="required"> Male</label>
-                    <label><input type="radio" name="gender" value="Non-binary" required="required"> Non-binary</label>
-                    <label><input type="radio" name="gender" value="Prefer not to say" required="required"> Prefer not to say</label>
-                </p>
-            </fieldset>
-
-            <!-- Address -->
-            <fieldset>
-                <legend>Address</legend>
-
-                <p>
-                    <label for="street">Street Address:</label>
-                    <input type="text" id="street" name="street" maxlength="40" required="required">
-                </p>
-
-                <p>
-                    <label for="suburb">Suburb/Town:</label>
-                    <input type="text" id="suburb" name="suburb" maxlength="40" required="required">
-                </p>
-
-                <p>
-                    <label for="state">State:</label>
-                    <select id="state" name="state" required="required">
-                       <option value="">Please Select</option>
-                        <option value="NSW">New South Wales</option>
-                        <option value="VIC">Victoria</option>
-                        <option value="QLD">Queensland</option>
-                        <option value="WA">Western Australia</option>
-                        <option value="SA">South Australia</option>
-                        <option value="TAS">Tasmania</option>
-                        <option value="NT">Northern Territory</option>
-                        <option value="ACT">Australian Capital Territory</option>
-                    </select>
-                </p>
-
-                <p>
-                    <label for="postcode">Postcode:</label>
-                    <input type="text" id="postcode" name="postcode" maxlength="4" pattern="\d{4}" required="required">
-                </p>
-            </fieldset>
-
-            <!-- Contact Details -->
-            <fieldset>              
-                <legend>Contact Details</legend>
-
-                <p>
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" maxlength="40" required="required">
-                </p>
-
-                <p>
-                    <label for="phone">Phone Number:</label>
-                    <input type="text" id="phone" name="phone" pattern="\d{8,12}" required="required">
-                </p>
-            </fieldset>
-
-            <!-- Skills -->
-            <fieldset>
-                <legend>Skills</legend>
-
-                <p>
-                    <label><input type="checkbox" name="skills[]" value="Field Research"> Field Research</label>
-                    <label><input type="checkbox" name="skills[]" value="Community Engagement"> Community Engagement</label>
-                    <label><input type="checkbox" name="skills[]" value="Data Analysis"> Data Analysis</label>
-                    <label><input type="checkbox" name="skills[]" value="Fundraising"> Fundraising</label>
-                    <label><input type="checkbox" name="skills[]" value="Volunteer Coordination"> Volunteer Coordination</label>
-                    <label><input type="checkbox" name="skills[]" value="Environmental Education"> Environmental Education</label>
-                </p>
-
-                <p>
-                    <label for="otherskills">Other Skills:</label><br>
-                    <textarea id="otherskills" name="otherskills" rows="4" cols="50" placeholder="Please specify any other relevant skills..."></textarea>
-                </p>
-            </fieldset>
-
-            <!-- Form Actions -->
-            <p>
-                <input type="submit" value="Submit Application">
-                <input type="reset" value="Clear form">
-            </p>
-
-        </form>
+            </form>
     </main>
-
-</body>
-</html>
-  </main>
 
   <footer>
     <hr>
