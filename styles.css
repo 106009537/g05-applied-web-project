@@ -1,6 +1,6 @@
 main {
-    width: 90%;
-    max-width: 1000px; /* Sets a maximum width for the main content area to ensure it doesn't stretch too wide on large screens */
+    width: 97%;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -106,15 +106,31 @@ body {
                        zero height since floated elements are removed from normal document flow. */
 }
 
+#overview h2 {
+    background-color: #1B4D3E;
+    border-left: 5px solid rgb(64, 87, 81);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
 #overview article {
     float: left;
-    width: 48%;
+    width: 45%;
+    background-color: #cddbd7;
+    color: #313534;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #88aba1;
 }
 
 #overview figure {
     float: right;
     width: 48%;
     margin: 0;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 #overview img {
@@ -129,14 +145,28 @@ body {
 
 #impacts {
     clear: both;  /* Ensures that the #impacts section starts below any floated elements from previous sections. */
-    margin-top: 30px;
+    margin-top: 50px;
     overflow: auto; 
+}
+
+#impacts h2 {
+    background-color: #1B4D3E;
+    border-left: 5px solid rgb(64, 87, 81);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
 }
 
 #impacts article {
     float: left;
-    width: 48%;
+    width: 45%;
     margin-right: 4%;
+    background-color: #cddbd7;
+    color: #313534;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #88aba1;
 }
 
 #impacts article:last-child { /* Removes the right margin from the last article 
@@ -153,6 +183,10 @@ body {
     width: 100%;
 }
 
+#impacts h3 {
+    color: #1B4D3E;
+}
+
 
 /* -------------------- */
 /* Donor rankings       */
@@ -160,27 +194,38 @@ body {
 
 #donors {
     clear: both;
-    margin-top: 30px;
+    margin-top: 50px;
     overflow: auto;
+}
+
+#donors h2 {
+    background-color: #1B4D3E;
+    border-left: 5px solid rgb(64, 87, 81);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
 }
 
 #donors article {
     float: left;
-
     width: 29%;
-
     margin-right: 2%;
     padding: 1%;
-
-    border: 2px solid #002C18;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    background-color: #cddbd7;
+    color: #313534;
+    border: none;
+    border-left: 5px solid #88aba1;
+    border-radius: 10px;
 }
+
 
 #donors article:last-child {
     margin-right: 0;
 }
 
 #donors h3 {
+    color: #1B4D3E;
     margin-top: 5px;
 }
 
@@ -201,6 +246,9 @@ body {
 #acknowledgement img {
     width: 100%;
     height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
 }
 
 
