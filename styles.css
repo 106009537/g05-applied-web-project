@@ -212,6 +212,16 @@ body {
 
 /* About page */
 
+#about-title {
+    background-color: #1B4D3E;
+    border-left: 5px solid rgb(64, 87, 81);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
 #team {
     display: flex;
     justify-content: space-between;
