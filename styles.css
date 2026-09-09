@@ -359,7 +359,8 @@ dd {
     color: white;
     padding: 30px;
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 15px;
 }
 
 .job-block{
@@ -404,3 +405,110 @@ dd {
        For the apply page
 ============================================= */
 
+#apply-title {
+    background-color: #1B4D3E;
+    border-left: 5px solid rgb(64, 87, 81);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.apply-introduction {
+    background-color: #a7d4c7;
+    color: #313534;
+    padding: 20px;
+    border-left: 5px solid #88aba1;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+#application-form {
+    margin-bottom: 40px;
+}
+
+.application-section {
+    background-color: #cddbd7;
+    color: #313534;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: none;
+    border-left: 5px solid #88aba1;
+    border-radius: 10px;
+}
+
+.application-section legend {
+    background-color: #1B4D3E;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.application-section label {
+    color: #313534;
+    font-weight: bold;
+}
+
+.application-section input[type="text"],
+.application-section input[type="email"],
+.application-section select,
+.application-section textarea {
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px solid #88aba1;
+    border-radius: 5px;
+
+}
+
+.application-section textarea {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 90%;
+    max-width: 600px;
+}
+
+.application-section input[type="radio"],
+.application-section input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.application-section p label {
+    margin-right: 20px;
+}
+
+#form-buttons {
+    margin-top: 30px;
+}
+
+#form-buttons input[type="submit"] {
+    background-color: rgb(129, 86, 7);
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-left: 5px solid rgb(102, 68, 5);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#form-buttons input[type="submit"]:hover {
+    background-color: rgb(102, 68, 5);
+    border-left: 5px solid rgb(92, 61, 4);
+}
+
+#form-buttons input[type="reset"] {
+    background-color: #1B4D3E;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#form-buttons input[type="reset"]:hover {
+    background-color: #143A2F;
+}
