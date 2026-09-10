@@ -311,6 +311,36 @@ footer {
 
 
 /* -------------------- */
+/* Recovery table       */
+/* -------------------- */
+
+#recovery-table {
+    margin-top: 50px;
+}
+
+#recovery-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #cddbd7;
+}
+
+#recovery-table th,
+#recovery-table td {
+    border: 1px solid #88aba1;
+    padding: 15px;
+    text-align: left;
+}
+
+#recovery-table thead th {
+    background-color: #1F3C27;
+    color: white;
+}
+
+#recovery-table tbody th {
+    color: #1B4D3E;
+}
+
+/* -------------------- */
 /* Acknowledgement      */
 /* -------------------- */
 
