@@ -18,7 +18,7 @@ https://g05-applied-web-project.atlassian.net?continue=https%3A%2F%2Fg05-applied
 | Eduardo Lemos | GitHub repository setup (structure, access, GitHub Pages deployment, this README), drafted Group Agreement |
 | Sebastian Kesuma | |
 | Alisha Khokhar | |
-| Cameron Yardy | |
+| Cameron Yardy | CSS Styling, Jobs.html, Page Specific style Requirements |
 
 
 
@@ -32,3 +32,4 @@ https://g05-applied-web-project.atlassian.net?continue=https%3A%2F%2Fg05-applied
 ## GenAI Acknowledgement [We'll add any tools/prompts used, per unit requirements]
 1. Used Claude to format above Group Contributions Table
 2. Used ChatGPT to generate Job positions/details
+3. Used AI to apply the premade CSS Style to all pages
