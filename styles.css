@@ -73,6 +73,39 @@ body {
 
 
 
+footer {
+    background-color: #002C18;
+    color: white;
+    margin-top: 40px;
+}
+
+.footer-content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
 /* =======================================================
         For the homepage
 ========================================================*/
