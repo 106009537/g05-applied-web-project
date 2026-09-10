@@ -36,3 +36,4 @@ https://g05-applied-web-project.atlassian.net?continue=https%3A%2F%2Fg05-applied
 4. Used ChatGPT to assist with css box layout and image sizing to ensure responsive design at various window sizes on index and About Us.
 5. Used ChatGPT to generate all images and logos in index, about us and header.
 6. Used ChatGPT to generate text explanations about the company on index.
+7. Used ChatGPT to help fix issues flagged by Accessibility Checker

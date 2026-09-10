@@ -75,7 +75,7 @@
 
         <section id="impacts">
 
-            <h1>Impacts</h1>
+            <h2>Impacts</h2>
 
             <div class="impact-container">
                 <article>
@@ -106,7 +106,7 @@
 <!-- Adding inline styles for the donor section to satisfy the requirement -->
         <section id="donors">  
 
-            <h1>High Donor Rankings</h1>
+            <h2>High Donor Rankings</h2>
             <div class="donor-container">
             <article style="display: flex; justify-content: space-between; align-items: center; background-color: #1F3C27; color: white; padding: 10px; border-radius: 5px;">
                 
@@ -150,41 +150,42 @@
         </section>
 
         <section id="recovery-table">
-    <h1>Recovery Priorities</h1>
+    <h2>Recovery Priorities</h2>
 
     <table>
         <thead>
             <tr>
-                <th rowspan="2">Focus Area</th>
-                <th colspan="2">Recovery Actions</th>
+                <th rowspan="2" scope="col" id="focus">Focus Area</th>
+                <th colspan="2" scope="colgroup" id="actions">Recovery Actions</th>
             </tr>
             <tr>
-                <th>Activity</th>
-                <th>Goal</th>
+                <th scope="col" id="activity">Activity</th>
+                <th scope="col" id="goal">Goal</th>
             </tr>
         </thead>
 
         <tbody>
             <tr>
-                <th rowspan="2">Habitat Protection</th>
-                <td>Native vegetation restoration</td>
-                <td>Improve quokka habitats</td>
-            </tr>
-            <tr>
-                <td>Invasive species management</td>
-                <td>Reduce threats to populations</td>
+                <th rowspan="2" scope="rowgroup" id="habitat">Habitat Protection</th>
+                <td headers="habitat activity">Native vegetation restoration</td>
+                <td headers="habitat goal">Improve quokka habitats</td>
             </tr>
 
             <tr>
-                <th>Population Recovery</th>
-                <td>Population monitoring and protection</td>
-                <td>Support healthy wild populations</td>
+                <td headers="habitat activity">Invasive species management</td>
+                <td headers="habitat goal">Reduce threats to populations</td>
             </tr>
 
             <tr>
-                <th>Community</th>
-                <td>Education and conservation awareness</td>
-                <td>Encourage long-term protection</td>
+                <th scope="row" id="population">Population Recovery</th>
+                <td headers="population activity">Population monitoring and protection</td>
+                <td headers="population goal">Support healthy wild populations</td>
+            </tr>
+
+            <tr>
+                <th scope="row" id="community">Community</th>
+                <td headers="community activity">Education and conservation awareness</td>
+                <td headers="community goal">Encourage long-term protection</td>
             </tr>
         </tbody>
     </table>
