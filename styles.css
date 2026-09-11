@@ -684,3 +684,16 @@ dd {
 #form-buttons input[type="reset"]:hover {
     background-color: #143A2F;
 }
+
+.application-section .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+}
+
+.application-section .skills-list label {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin-right: 0;
+}

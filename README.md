@@ -17,7 +17,7 @@ https://g05-applied-web-project.atlassian.net?continue=https%3A%2F%2Fg05-applied
 |------|---------------|
 | Eduardo Lemos | Homepage, About US html and css; Header, Footer html and css; Jira, Github repo, readme, and Github pages setup; generation and css management for Hompage images and background, drafted Group Agreement |
 | Sebastian Kesuma | |
-| Alisha Khokhar | |
+| Alisha Khokhar | Built the Job Application page (apply.html) — created the full form with all required fields and validation patterns; fixed structural HTML errors; added Flexbox layout styling for the form; resolved a Git merge conflict in the shared styles.css. | 
 | Cameron Yardy | CSS Styling, Jobs.html, Page Specific style Requirements |
 
 
