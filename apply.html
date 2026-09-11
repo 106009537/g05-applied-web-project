@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="G05 recruitment website for an environmental conservation organisation.">
-  <title>Home - G05 Recruitment Website</title>
+  <meta name="description" content="Job Application Form for Quokka Recovery Program. Apply to join our team and contribute to environmental conservation efforts.">
+  <meta name="keywords" content="Environmental Conservation, Job Application, HTML, Form, Quokka Recovery Program Recruitment">
+  <meta name="author" content="Alisha">
+  <title>Job Application - Quokka Recovery Program</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,7 +16,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="jobs.html">Jobs</a></li>
-        <li><a href="apply.html">Apply</a></li>
+        <li><a href="apply.html" aria-current="page">Apply</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
     </nav>
@@ -23,28 +25,28 @@
   <main>
     <h1>Coming soon</h1>
     <p>This site is under construction.</p>
-    <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Job Application Form for G05 Recruitment Website">
-    <meta name="keywords" content="Environmental Conservation, Job Application, HTML, Form, G05 Recruitment">
+    <meta name="description" content="Job Application Form for Quokka Recovery Program. Apply to join our team and contribute to environmental conservation efforts.">
+    <meta name="keywords" content="Environmental Conservation, Job Application, HTML, Form, Quokka Recovery Program Recruitment">
     <meta name="author" content="Alisha">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Application - G05 Recruitment Website</title>
+    <title>Job Application - Quokka Recovery Program</title>
 </head>
 <body>
 
     <header>
     <a href="index.html">
-        <img src="images/logo.png" alt="G05 Recruitment Logo">
+        <img src="images/logo.png" alt="Quokka Recovery Program Logo">
     </a>
-    <h1>G05 Recruitment</h1>
+    <h1>Quokka Recovery Program</h1>
 </header>
 
-    <p>
+    <main>
+        <h1>Apply to Join Our Team</h1>
+        <p style="color:#2f6b3a; font-weight:bold;">
         Thank you for your interest in joining our team. Please complete the form below to apply for a position with us.
-    </p>
+  </p>
     
     <main>
         <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
@@ -55,19 +57,19 @@
 
                 <p>
                     <label for="jobref">Job Reference Number:</label>
-                    <input type="text" id="jobref" name="jobref" pattern="[A-Za-z0-9]{6}" maxlength="6" required="required">
+                    <input type="text" id="jobref" name="jobref" pattern="[A-Za-z0-9]{6}" maxlength="6" title="Exactly 6 letters or numbers" required="required">
                 </p>
 
                 <p>
                     <label for="fname">First Name:</label>
-                    <input type="text" id="fname" name="fname" maxlength="20" pattern="[A-Za-z]+" required="required">
+                    <input type="text" id="fname" name="fname" maxlength="20" pattern="[A-Za-z]+" title="Please enter a valid first name" required="required">
                     <label for="lname">Last Name:</label>
-                    <input type="text" id="lname" name="lname" maxlength="20" pattern="[A-Za-z]+" required="required">
+                    <input type="text" id="lname" name="lname" maxlength="20" pattern="[A-Za-z]+" title="Please enter a valid last name" required="required">
                 </p>
                 
                 <p>
                     <label for="dob">Date of Birth:</label>
-                    <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required="required">
+                    <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" title="Please enter a valid date of birth" required="required">
                 </p>
 
             </fieldset>
@@ -115,7 +117,7 @@
 
                 <p>
                     <label for="postcode">Postcode:</label>
-                    <input type="text" id="postcode" name="postcode" maxlength="4" pattern="\d{4}" required="required">
+                    <input type="text" id="postcode" name="postcode" maxlength="4" pattern="\d{4}" title="Please enter a valid postcode" required="required">
                 </p>
             </fieldset>
 
@@ -125,12 +127,12 @@
 
                 <p>
                     <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" maxlength="40" required="required">
+                    <input type="email" id="email" name="email" maxlength="40" title="Please enter a valid email address" required="required">
                 </p>
 
                 <p>
                     <label for="phone">Phone Number:</label>
-                    <input type="text" id="phone" name="phone" pattern="\d{8,12}" required="required">
+                    <input type="tel" id="phone" name="phone" pattern="\d{8,12}" title="Please enter a valid phone number" required="required">
                 </p>
             </fieldset>
 
@@ -154,20 +156,16 @@
             </fieldset>
 
             <!-- Form Actions -->
-            <p>
-                <input type="submit" value="Submit Application">
-                <input type="reset" value="Clear form">
-            </p>
-
-        </form>
-    </main>
-
-</body>
-</html>
+                  <div class="form-actions">
+        <input type="submit" value="Submit Application">
+        <input type="reset" value="Clear Form">
+      </div>
+    </form>
   </main>
 
   <footer>
-    <p>&copy; 2026 G05 Swinburne Uni</p>
+    <p>&copy; 2026 Quokka Recovery Program — G05</p>
   </footer>
+
 </body>
 </html>
