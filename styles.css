@@ -1,50 +1,110 @@
-nav {
-    display: flex;
-    justify-content: space-around;
+main {
+    width: 97%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
-    padding: 20px;
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
 
-    background-color: grey;
-/*  The below code stretches the nav to the full width of the viewport */
+header {
+    background-color: #002C18;
     width: 100vw; /*   100% of the viewport width */
     margin-left: calc(50% - 50vw); /* calc 50% of the viewport width and subtract 50% of the parent element's width to center the nav */
 }
 
-nav a {
-    color: black;
-    text-decoration: none;
+.header-content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px 0;
+
+    display: flex;
+    align-items: center;
 }
 
 .logo {
-    border: 3px solid black;
-    padding: 30px;
-    margin-left: 5%;
-    
+    width: 180px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+    margin-left: auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #143A2F;
 }
 
 .donate-button {
-    background-color: rgba(11, 58, 31, 0.815);
+    margin-left: 40px;
+
+    background-color: #C98A17;
     color: white;
-    padding: 15px 25px;
-    border-radius: 5px;
+    padding: 12px 25px;
+    border-radius: 25px;
     text-decoration: none;
-    margin-right: 10%;
 }
 
-.header-top {
+.donate-button:hover {
+    background-color: #A96F0D;
+}
+
+body {
+  
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #ffffff;
+
+    background-image: url("images/waves-pattern.png");
+    background-repeat: repeat;
+    background-size: 180px;
+    }
+
+
+
+
+footer {
+    background-color: #002C18;
+    color: white;
+    margin-top: 40px;
+}
+
+.footer-content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
-  
+
+    padding: 20px 0;
 }
 
-
-body {
-  background-color: lightgray;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  margin: 10%;
+.footer-links {
+    display: flex;
+    gap: 30px;
 }
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
 
 /* =======================================================
         For the homepage
@@ -54,7 +114,7 @@ body {
 /* -------------------- */
 
 #introduction {
-    margin-top: 30px;
+    margin-top: 0;
 }
 
 #introduction figure {
@@ -62,7 +122,10 @@ body {
 }
 
 #introduction img {
-    width: 100%;
+    display: block;
+    width: 100vw; /*   100% of the viewport width */
+    margin-left: calc(50% - 50vw);
+    height: auto;
 }
 
 
@@ -72,23 +135,58 @@ body {
 
 #overview {
     margin-top: 50px;
-    overflow: auto;
+
+    /* Grid creates two equal columns with a consistent gap between them.
+       This keeps the article and image aligned along the same centre line. */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    /* Creates the vertical strip of space between the two columns. */
+    gap: 4%;
+
+    /* Makes both grid items stretch to the same row height. */
+    align-items: stretch;
 }
 
 #overview article {
-    float: left;
-    width: 42%;
+    width: 100%;
+
+    /* box-sizing ensures the padding and border are included
+       inside the element's total width and height. */
+    box-sizing: border-box;
+
+    padding: 25px;
+
+    background-color: #cddbd7;
+    color: #313534;
+
+    border-radius: 10px;
+    border-left: 5px solid #1E3E27;
+    
 }
 
 #overview figure {
-    float: right;
-    width: 52%;
+    width: 100%;
     margin: 0;
+
+    border-radius: 10px;
+
+    /* Hides any part of the image that extends past
+       the rounded edges of the figure. */
+    overflow: hidden;
 }
 
 #overview img {
     width: 100%;
- 
+    height: 100%;
+
+    /* Fills the figure without stretching the image.
+       Parts of the image may be cropped if necessary. */
+    object-fit: cover;
+
+    /* Removes the small inline-image gap that browsers
+       can otherwise leave underneath an image. */
+    display: block;
 }
 
 
@@ -97,27 +195,72 @@ body {
 /* -------------------- */
 
 #impacts {
-    clear: both;
-    margin-top: 30px;
-    overflow: auto;
+    margin-top: 50px;
+}
+
+#impacts .impact-container {
+    /* Uses the same two-column grid as the overview section,
+       so all four elements stay aligned around the same centre line. */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    /* Matches the overview gap so the whitespace lines up vertically. */
+    gap: 4%;
+
+    /* Makes both impact cards the same height if their
+       content lengths are slightly different. */
+    align-items: stretch;
 }
 
 #impacts article {
-    float: left;
-    width: 48%;
-    margin-right: 4%;
-}
+    width: 100%;
+    margin: 0;
 
-#impacts article:last-child {
-    margin-right: 0;
+    /* Keeps padding and borders, if added later,
+       inside the width of the grid column. */
+    box-sizing: border-box;
+
+    /* Flexbox is used inside each card so the image and
+       text are arranged vertically as one unit. */
+    display: flex;
+    flex-direction: column;
 }
 
 #impacts figure {
+    /* Making sure that the figure doesn't have margins
+       so that it aligns properly with the article. */
     margin: 0;
 }
 
 #impacts img {
     width: 100%;
+
+    /* Removes the default inline-image gap underneath the image. */
+    display: block;
+
+    border-radius: 10px 10px 0 0;
+}
+
+#impacts h3 {
+    color: #1B4D3E;
+}
+
+#impacts article p {
+    margin: 0;
+
+    background-color: #cddbd7;
+    color: #313534;
+
+    padding: 20px 25px;
+
+    border: 2px solid #1E3E27;
+
+    /* Only round the bottom corners so the text section
+       connects seamlessly to the square-bottomed image. */
+    border-radius: 0 0 10px 10px;
+
+    /* Makes both text areas stretch evenly if one has more text. */
+    flex-grow: 1;
 }
 
 
@@ -125,25 +268,38 @@ body {
 /* Donor rankings       */
 /* -------------------- */
 
-#donors {
-    clear: both;
-    margin-top: 30px;
-    overflow: auto;
+#donors .donor-container {
+    display: flex;
+
+    /* Keeps all three donor cards in one row. */
+    flex-wrap: nowrap;
+
+    /* Creates even space between the cards. */
+    gap: 2%;
+
+    /* Centers the group of cards within the page. */
+    justify-content: center;
+
+    align-items: stretch;
 }
 
 #donors article {
-    float: left;
+    /* Each card takes an equal share of the available row width. */
+    flex: 1;
 
-    width: 29%;
+    /* Prevents them from growing too wide. */
+    max-width: 32%;
 
-    margin-right: 2%;
+    margin: 0;
     padding: 1%;
 
-    border: 1px solid #dddddd;
-}
+    background-color: #1F3C27;
+    color: white;
 
-#donors article:last-child {
-    margin-right: 0;
+    border: none;
+    border-radius: 10px;
+
+    box-sizing: border-box;
 }
 
 #donors h3 {
@@ -156,6 +312,36 @@ body {
 
 
 /* -------------------- */
+/* Recovery table       */
+/* -------------------- */
+
+#recovery-table {
+    margin-top: 50px;
+}
+
+#recovery-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #cddbd7;
+}
+
+#recovery-table th,
+#recovery-table td {
+    border: 1px solid #88aba1;
+    padding: 15px;
+    text-align: left;
+}
+
+#recovery-table thead th {
+    background-color: #1F3C27;
+    color: white;
+}
+
+#recovery-table tbody th {
+    color: #1B4D3E;
+}
+
+/* -------------------- */
 /* Acknowledgement      */
 /* -------------------- */
 
@@ -166,7 +352,8 @@ body {
 
 #acknowledgement img {
     width: 100%;
-    height: 180px;
+    display: block;
+    border-radius: 10px;
 }
 
 
@@ -178,14 +365,38 @@ body {
 
 /* About page */
 
+#about-title {
+    background-color: #1B4D3E;
+    border-left: 5px solid rgb(64, 87, 81);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
 #team {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+    gap: 20px
 }
 
 #team article {
     width: 45%;
+    background-color: #cddbd7;
+    color: #313534;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #88aba1;
+}
+
+#team article h1 {
+    color: #1B4D3E;
+}
+
+#team article h2 {
+    color: #1B4D3E;
 }
 
 #team figure {
@@ -195,24 +406,43 @@ body {
 
 #team figure img {
     width: 100%;
+    border-radius: 10px;
 }
 
 
 /* Quotes + fun facts */
 
 #team-details {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Flexbox layout - arranges all the child elements in a row */
+    /* Maybe I should have done the floated elements with flexbox too*/
+    justify-content: space-between; /* Makes space between child elements evenly */
     margin-top: 50px;
+    gap: 20px;
 }
 
 #team-details article {
     width: 45%;
+    background-color: #cddbd7;
+    color: #313534;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #88aba1;
+}
+
+#team-details article h2 {
+    color: #1B4D3E;
+}
+
+#team-details article h3 {
+    color: #1B4D3E;
 }
 
 #team-details table {
     width: 48%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* Makes all the borders in the table collapse into a single border instead of having double borders */
+    background-color: #cddbd7;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 #team-details th,
@@ -221,8 +451,24 @@ body {
     padding: 15px;
 }
 
+#team-details thead th {
+    background-color: #1B4D3E;
+    color: white;
+}
+
+#team-details tbody th {
+    color: #1B4D3E;
+    background-color: #cddbd7;
+}
+
+#team-details tbody td {
+    color: #313534;
+}
+
 
 /* Definition list spacing */
+/* dt = definition term
+dd = definition description */
 
 dt {
     margin-top: 20px;
@@ -232,6 +478,9 @@ dd {
     margin-top: 5px;
 }
 
+#team article dt:hover {
+    color: #C98A17;
+}
 
 
 /* =============================================
@@ -245,6 +494,13 @@ dd {
     border-radius: 5px;
     text-decoration: none;
     margin-left: 20px;
+    font-weight: bold;
+    border-left: 5px solid rgb(102, 68, 5);
+}
+
+.apply-here:hover {
+    background-color: rgb(102, 68, 5);
+    border-left: 5px solid rgb(92, 61, 4);
 }
 
 .jobs-grid {
@@ -261,30 +517,44 @@ dd {
 
 .job-heading {
     margin: 0;
+    color: #1B4D3E;
 }
 
 #jobs-title {
     background-color: #1B4D3E;
+    border-left: 5px solid rgb(64, 87, 81);
     color: white;
     padding: 30px;
     border-radius: 10px;
+    margin-top: 40px;
     margin-bottom: 30px;
-}
-
-#jobs-info {
-    color: rgb(0, 0, 0);
-}
-
-.job-heading {
-    color: rgb(0, 0, 0);
 }
 
 .job-block{
-    background-color: #b0bdad;
-    color: black;
+    background-color: #cddbd7;
+    color: #313534;
     padding: 30px;
     margin-bottom: 30px;
     border-radius: 10px;
+    border-left: 5px solid #88aba1;
+}
+
+#jobs-title h1{
+    color: white;
+}
+
+#jobs-info {
+    width: 25%;
+    margin: 30px 3% 30px 0;
+    padding: 20px;
+    background-color: #a7d4c7;
+    border-left: 5px solid #88aba1;
+    border-radius: 10px;
+    float: left;
+}
+
+#jobs-info h2 {
+    color: #1B4D3E;
 }
 
 .jobs-image {
@@ -300,3 +570,117 @@ dd {
     display: block;
 }
 
+/* =============================================
+       For the apply page
+============================================= */
+
+#apply-title {
+    background-color: #1B4D3E;
+    border-left: 5px solid rgb(64, 87, 81);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.apply-introduction {
+    background-color: #a7d4c7;
+    color: #313534;
+    padding: 20px;
+    border-left: 5px solid #88aba1;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+#application-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.application-section {
+    background-color: #cddbd7;
+    color: #313534;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: none;
+    border-left: 5px solid #88aba1;
+    border-radius: 10px;
+}
+
+.application-section legend {
+    background-color: #1B4D3E;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.application-section label {
+    color: #313534;
+    font-weight: bold;
+}
+
+.application-section input[type="text"],
+.application-section input[type="email"],
+.application-section select,
+.application-section textarea {
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px solid #88aba1;
+    border-radius: 5px;
+
+}
+
+.application-section textarea {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 90%;
+    max-width: 600px;
+}
+
+.application-section input[type="radio"],
+.application-section input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.application-section p label {
+    margin-right: 20px;
+}
+
+#form-buttons {
+    margin-top: 30px;
+}
+
+#form-buttons input[type="submit"] {
+    background-color: rgb(129, 86, 7);
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-left: 5px solid rgb(102, 68, 5);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#form-buttons input[type="submit"]:hover {
+    background-color: rgb(102, 68, 5);
+    border-left: 5px solid rgb(92, 61, 4);
+}
+
+#form-buttons input[type="reset"] {
+    background-color: #1B4D3E;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#form-buttons input[type="reset"]:hover {
+    background-color: #143A2F;
+}

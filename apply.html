@@ -8,11 +8,20 @@
   <meta name="author" content="Alisha">
   <title>Job Application - Quokka Recovery Program</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+  .apply-form legend {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+</style>
 </head>
 <body>
   <header>
+    <a href="index.html">
+        <img src="images/logo.png" alt="Quokka Recovery Program Logo">
+    </a>
+    <h1>Quokka Recovery Program</h1>
     <nav>
-      <h1>Apply</h1>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="jobs.html">Jobs</a></li>
@@ -22,34 +31,13 @@
     </nav>
   </header>
 
-  <main>
-    <h1>Coming soon</h1>
-    <p>This site is under construction.</p>
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Job Application Form for Quokka Recovery Program. Apply to join our team and contribute to environmental conservation efforts.">
-    <meta name="keywords" content="Environmental Conservation, Job Application, HTML, Form, Quokka Recovery Program Recruitment">
-    <meta name="author" content="Alisha">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Application - Quokka Recovery Program</title>
-</head>
-<body>
-
-    <header>
-    <a href="index.html">
-        <img src="images/logo.png" alt="Quokka Recovery Program Logo">
-    </a>
-    <h1>Quokka Recovery Program</h1>
-</header>
-
     <main>
         <h1>Apply to Join Our Team</h1>
         <p style="color:#2f6b3a; font-weight:bold;">
         Thank you for your interest in joining our team. Please complete the form below to apply for a position with us.
   </p>
     
-    <main>
-        <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+        <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" class="apply-form">
 
             <!-- Personal & Position Details -->
             <fieldset>
@@ -69,7 +57,7 @@
                 
                 <p>
                     <label for="dob">Date of Birth:</label>
-                    <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" title="Please enter a valid date of birth" required="required">
+                    <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" title="Please enter a valid date of birth (dd/mm/yyyy)" required="required">
                 </p>
 
             </fieldset>
@@ -117,7 +105,7 @@
 
                 <p>
                     <label for="postcode">Postcode:</label>
-                    <input type="text" id="postcode" name="postcode" maxlength="4" pattern="\d{4}" title="Please enter a valid postcode" required="required">
+                    <input type="text" id="postcode" name="postcode" maxlength="4" pattern="\d{4}" title="Please enter a valid postcode (4 digits)" required="required">
                 </p>
             </fieldset>
 
@@ -132,7 +120,7 @@
 
                 <p>
                     <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" pattern="\d{8,12}" title="Please enter a valid phone number" required="required">
+                    <input type="tel" id="phone" name="phone" pattern="\d{8,12}" title="Please enter a valid phone number between 8 to 12 digits" required="required">
                 </p>
             </fieldset>
 
@@ -156,16 +144,16 @@
             </fieldset>
 
             <!-- Form Actions -->
-                  <div class="form-actions">
-        <input type="submit" value="Submit Application">
-        <input type="reset" value="Clear Form">
-      </div>
-    </form>
-  </main>
+            <div class="form-actions">
+                <input type="submit" value="Submit Application">
+                <input type="reset" value="Clear form">
+            </div>
+        </form>
+    </main>
 
   <footer>
-    <p>&copy; 2026 Quokka Recovery Program — G05</p>
+    <p>&copy; 2026 Quokka Recovery Program - G05</p>
   </footer>
-
+  
 </body>
 </html>

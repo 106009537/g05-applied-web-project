@@ -15,10 +15,10 @@ https://g05-applied-web-project.atlassian.net?continue=https%3A%2F%2Fg05-applied
 
 | Name | Contributions |
 |------|---------------|
-| Eduardo Lemos | GitHub repository setup (structure, access, GitHub Pages deployment, this README), drafted Group Agreement |
+| Eduardo Lemos | Homepage, About US html and css; Header, Footer html and css; Jira, Github repo, readme, and Github pages setup; generation and css management for Hompage images and background, drafted Group Agreement |
 | Sebastian Kesuma | |
 | Alisha Khokhar | |
-| Cameron Yardy | |
+| Cameron Yardy | CSS Styling, Jobs.html, Page Specific style Requirements |
 
 
 
@@ -32,3 +32,8 @@ https://g05-applied-web-project.atlassian.net?continue=https%3A%2F%2Fg05-applied
 ## GenAI Acknowledgement [We'll add any tools/prompts used, per unit requirements]
 1. Used Claude to format above Group Contributions Table
 2. Used ChatGPT to generate Job positions/details
+3. Used AI to apply the premade CSS Style to all pages
+4. Used ChatGPT to assist with css box layout and image sizing to ensure responsive design at various window sizes on index and About Us.
+5. Used ChatGPT to generate all images and logos in index, about us and header.
+6. Used ChatGPT to generate text explanations about the company on index.
+7. Used ChatGPT to help fix issues flagged by Accessibility Checker
