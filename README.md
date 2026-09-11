@@ -16,8 +16,8 @@ https://g05-applied-web-project.atlassian.net?continue=https%3A%2F%2Fg05-applied
 | Name | Contributions |
 |------|---------------|
 | Eduardo Lemos | Homepage, About US html and css; Header, Footer html and css; Jira, Github repo, readme, and Github pages setup; generation and css management for Hompage images and background, drafted Group Agreement |
-| Sebastian Kesuma | |
-| Alisha Khokhar | |
+| Sebastian Kesuma | | Left the project on day one
+| Alisha Khokhar | |Apply page html and css.
 | Cameron Yardy | CSS Styling, Jobs.html, Page Specific style Requirements |
 
 
