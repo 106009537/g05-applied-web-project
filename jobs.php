@@ -1,31 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="G05 recruitment website for an environmental conservation organisation.">
-  <title>Home - G05 Recruitment Website</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="header-content">
-
-            <a href="index.html">
-                <img class="logo" src="images/quokka_logo.png" alt="Quokka Recovery Program">
-            </a>
-
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="jobs.html">Jobs</a>
-                <a href="apply.html">Apply</a>
-                <a href="about.html">About</a>
-            </nav>
-
-            <a class="donate-button" href="#">Donate!</a>
-
-        </div>
-    </header>
+<?php
+$page_title = "Job Positions - Quokka Recovery Program";
+include 'header.inc';
+?>
 
   <main>
     <section id ="jobs-title">
@@ -37,7 +13,7 @@
       <p>All paid positions are full time. Depending on the role, some positions may offer 
          flexible work arrangements depending on the nature of the role.</p>
       <p>If the application is successful we will email you with further information.</p>
-      <p>To apply head to the <a href="apply.html">apply</a> page.</p>
+      <p>To apply head to the <a href="apply.php">apply</a> page.</p>
     </aside>
 
     <section>
@@ -49,7 +25,7 @@
         <div class="job-title-row">
           <h3 class="job-heading">
           <strong>Job Title: </strong>Social Media Manager</h3>
-        <a class="apply-here" href="apply.html"> Apply Here!</a>
+        <a class="apply-here" href="apply.php"> Apply Here!</a>
         </div>
 
 
@@ -105,7 +81,7 @@
         <div class="job-title-row">
           <h3 class="job-heading">
           <strong>Job Title: </strong>Sustainability Educator</h3>
-          <a class="apply-here" href="apply.html"> Apply Here!</a>
+          <a class="apply-here" href="apply.php"> Apply Here!</a>
         </div>
         <p><strong>Reference number: </strong>SUE719</p>
 
@@ -159,7 +135,7 @@
           <h3 class="job-heading">
           <strong>Job Title: </strong>Volunteer Opportunities Coordinator
           </h3>
-          <a class="apply-here" href="apply.html"> Apply Here!</a>
+          <a class="apply-here" href="apply.php"> Apply Here!</a>
         </div>
 
         <p><strong>Reference number: </strong>VOC365</p>
@@ -218,26 +194,4 @@
   
   </main>
 
-<footer>
-    <div class="footer-content">
-        <p>&copy; 2026 G05 Swinburne Uni</p>
-
-        <div class="footer-links">
-            <a href="https://g05-applied-web-project.atlassian.net/jira/software/projects/SCRUM/boards/1"
-               target="_blank">
-                Jira Project
-            </a>
-
-            <a href="https://github.com/106009537/g05-applied-web-project.git"
-               target="_blank">
-                GitHub Repository
-            </a>
-
-            <a href="mailto:106009537@student.swin.edu.au">
-                contact@quokkarecoveryprogram.org
-            </a>
-        </div>
-    </div>
-</footer>
-</body>
-</html>
+<?php include 'footer.inc'; ?>
