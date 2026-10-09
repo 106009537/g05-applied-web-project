@@ -1,31 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="G05 recruitment website for an environmental conservation organisation.">
-  <title>Home - G05 Recruitment Website</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="header-content">
-
-            <a href="index.html">
-                <img class="logo" src="images/quokka_logo.png" alt="Quokka Recovery Program">
-            </a>
-
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="jobs.html">Jobs</a>
-                <a href="apply.html">Apply</a>
-                <a href="about.html">About</a>
-            </nav>
-
-            <a class="donate-button" href="#">Donate!</a>
-
-        </div>
-    </header>
+<?php
+$page_title = "About the Team - Quokka Recovery Program";
+include 'header.inc';
+?>
 
   <main>
 
@@ -47,7 +23,7 @@
 
                   <dt><strong>Alisha Khokhar:</strong></dt>
                   <dd>
-                      Built the Job Application page (apply.html) — created the full form with all required fields, validation patterns, and fieldsets; fixed structural HTML errors; added Flexbox layout styling for the form; resolved a Git merge conflict in the shared styles.css.
+                      Built the Job Application page (apply.php) — created the full form with all required fields, validation patterns, and fieldsets; fixed structural HTML errors; added Flexbox layout styling for the form; resolved a Git merge conflict in the shared styles.css.
                   </dd>
 
                   <dt><strong>Cameron Yardy:</strong></dt>
@@ -144,26 +120,4 @@
 
   </main>
 
-<footer>
-    <div class="footer-content">
-        <p>&copy; 2026 G05 Swinburne Uni</p>
-
-        <div class="footer-links">
-            <a href="https://g05-applied-web-project.atlassian.net/jira/software/projects/SCRUM/boards/1"
-               target="_blank">
-                Jira Project
-            </a>
-
-            <a href="https://github.com/106009537/g05-applied-web-project.git"
-               target="_blank">
-                GitHub Repository
-            </a>
-
-            <a href="mailto:106009537@student.swin.edu.au">
-                contact@quokkarecoveryprogram.org
-            </a>
-        </div>
-    </div>
-</footer>
-</body>
-</html>
+<?php include 'footer.inc'; ?>
