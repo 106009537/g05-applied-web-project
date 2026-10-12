@@ -71,6 +71,28 @@ ALTER TABLE `eoi`
 --
 ALTER TABLE `eoi`
   MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+-- --------------------------------------------------------
+-- jobs table (part 5)
+-- --------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS `jobs` (
+    `job_id` INT NOT NULL AUTO_INCREMENT,
+    `job_ref` CHAR(6) NOT NULL,
+    `job_title` VARCHAR(100) NOT NULL,
+    `salary` VARCHAR(50) NOT NULL,
+    `description` TEXT NOT NULL,
+    `reporting_line` VARCHAR(150) NOT NULL,
+    `responsibilities` TEXT NOT NULL,
+    `essential_requirements` TEXT NOT NULL,
+    `preferred_skills` TEXT NOT NULL,
+    PRIMARY KEY (`job_id`),
+    UNIQUE KEY `job_ref` (`job_ref`)
+);
+
+
+
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
