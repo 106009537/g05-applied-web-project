@@ -1,11 +1,88 @@
+
 <?php
 $page_title = "Job Positions - Quokka Recovery Program";
 include 'header.inc';
+require_once 'settings.php';
+
+$conn = mysqli_connect($host, $user, $pwd, $sql_db);
+
+if (!$conn) {
+    die("Unable to connect to the database server.");
+}
+
+if (isset($_GET['search'])) {
+
+    $search = mysqli_real_escape_string($conn, $_GET['search']);
+
+    $sql = "SELECT * FROM jobs
+            WHERE job_title LIKE '%$search%'
+            OR job_ref LIKE '%$search%'";
+
+} else {
+
+    $sql = "SELECT * FROM jobs";
+
+}
+
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+
+    while ($row = mysqli_fetch_assoc($result)) {
+
+        echo "<article class='job-block'>";
+
+        echo "<h2>" . $row['job_title'] . "</h2>";
+
+        echo "<p><strong>Reference number:</strong> "
+            . $row['job_ref'] . "</p>";
+
+        echo "<p><strong>Salary:</strong> "
+            . $row['salary'] . "</p>";
+
+        echo "<h3>Position Description</h3>";
+        echo "<p>" . $row['description'] . "</p>";
+
+        echo "<h3>Reporting Line</h3>";
+        echo "<p>Reports to " . $row['reporting_line'] . "</p>";
+
+        echo "<h3>Key Responsibilities</h3>";
+        echo "<p>" . $row['responsibilities'] . "</p>";
+
+        echo "<h3>Essential Requirements</h3>";
+        echo "<p>" . $row['essential_requirements'] . "</p>";
+
+        echo "<h3>Preferred Skills</h3>";
+        echo "<p>" . $row['preferred_skills'] . "</p>";
+
+        echo "</article>";
+    }
+
+} else {
+
+    if (isset($_GET['search'])) {
+        echo "<p>No matching jobs found.</p>";
+    } else {
+        echo "<p>No jobs are currently available.</p>";
+    }
+
+}
+
+mysqli_close($conn);
 ?>
+
 
   <main>
     <section id ="jobs-title">
       <h1>Current Hiring Position Descriptions</h1>
+
+      <form action="jobs.php" method="get">
+        <label for="search">Search by job title or reference:</label>
+
+        <input type="text" id="search" name="search">
+
+        <input type="submit" value="Search">
+      </form>
     </section>
 
     <aside id ='jobs-info'>
