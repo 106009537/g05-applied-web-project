@@ -90,6 +90,50 @@ CREATE TABLE IF NOT EXISTS `jobs` (
     UNIQUE KEY `job_ref` (`job_ref`)
 );
 
+-- --------------------------------------------------------
+-- Sample data for table `jobs`
+-- --------------------------------------------------------
+
+INSERT INTO `jobs` (
+    `job_ref`,
+    `job_title`,
+    `salary`,
+    `description`,
+    `reporting_line`,
+    `responsibilities`,
+    `essential_requirements`,
+    `preferred_skills`
+) VALUES
+(
+    'SCM482',
+    'Social Media Manager',
+    '$75,000 - $90,000 per year',
+    'Manage the organisation''s online presence and promote environmental conservation projects, community campaigns, educational resources and volunteer opportunities.',
+    'Communications and Marketing Manager',
+    'Develop and manage social media content.\nCreate engaging posts, videos and graphics.\nManage the social media calendar.\nMonitor audience engagement.\nPromote volunteer opportunities and fundraising campaigns.\nTrack social media performance.\nWork with conservation staff.',
+    'Relevant marketing or communications qualification or experience.\nExperience managing professional social media accounts.\nStrong communication skills.\nKnowledge of social media platforms.\nAbility to work independently and meet deadlines.\nInterest in environmental conservation.',
+    'Experience in a not-for-profit organisation.\nPhotography, video editing or graphic design.\nKnowledge of social media analytics.\nExperience promoting fundraising campaigns.'
+),
+(
+    'SUE719',
+    'Sustainability Educator',
+    '$70,000 - $85,000 per year',
+    'Develop and deliver educational programs that help schools, community groups and the public understand sustainability and environmental protection.',
+    'Education and Community Programs Manager',
+    'Develop educational workshops.\nDeliver presentations to schools and community groups.\nTeach recycling, biodiversity and climate change.\nOrganise environmental awareness events.\nCreate educational materials.\nWork with teachers and conservation staff.\nEvaluate educational programs.',
+    'Relevant environmental education or teaching qualification or experience.\nKnowledge of sustainability principles.\nExcellent presentation skills.\nAbility to explain environmental topics clearly.\nStrong organisational skills.\nAbility to work with schools and community groups.',
+    'Teaching experience.\nExperience developing educational resources.\nKnowledge of Australian ecosystems.\nFirst aid certification.\nExperience working with children or community groups.'
+),
+(
+    'VOC365',
+    'Volunteer Opportunities Coordinator',
+    '$65,000 - $78,000 per year',
+    'Recruit, support and coordinate volunteers involved in conservation projects, community campaigns, environmental events and fundraising activities.',
+    'Volunteer and Community Engagement Manager',
+    'Recruit new volunteers.\nCoordinate volunteer opportunities.\nMaintain volunteer records and schedules.\nOrganise induction and training.\nCommunicate with volunteers.\nSupport conservation events.\nRecognise volunteer contributions.\nCollect feedback and improve programs.',
+    'Experience in volunteer coordination or community engagement.\nExcellent interpersonal skills.\nStrong organisational and scheduling abilities.\nAbility to work with diverse people.\nGood computer and administrative skills.\nInterest in environmental conservation.',
+    'Experience with environmental organisations.\nExperience coordinating community events.\nKnowledge of workplace health and safety.\nExperience with volunteer databases.\nFirst aid certification.'
+);
 
 
 
