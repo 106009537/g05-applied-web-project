@@ -25,250 +25,119 @@ if (isset($_GET['search'])) {
 }
 
 $result = mysqli_query($conn, $sql);
-
-if (mysqli_num_rows($result) > 0) {
-
-    while ($row = mysqli_fetch_assoc($result)) {
-
-        echo "<article class='job-block'>";
-
-        echo "<h2>" . $row['job_title'] . "</h2>";
-
-        echo "<p><strong>Reference number:</strong> "
-            . $row['job_ref'] . "</p>";
-
-        echo "<p><strong>Salary:</strong> "
-            . $row['salary'] . "</p>";
-
-        echo "<h3>Position Description</h3>";
-        echo "<p>" . $row['description'] . "</p>";
-
-        echo "<h3>Reporting Line</h3>";
-        echo "<p>Reports to " . $row['reporting_line'] . "</p>";
-
-        echo "<h3>Key Responsibilities</h3>";
-        echo "<p>" . $row['responsibilities'] . "</p>";
-
-        echo "<h3>Essential Requirements</h3>";
-        echo "<p>" . $row['essential_requirements'] . "</p>";
-
-        echo "<h3>Preferred Skills</h3>";
-        echo "<p>" . $row['preferred_skills'] . "</p>";
-
-        echo "</article>";
-    }
-
-} else {
-
-    if (isset($_GET['search'])) {
-        echo "<p>No matching jobs found.</p>";
-    } else {
-        echo "<p>No jobs are currently available.</p>";
-    }
-
-}
-
-mysqli_close($conn);
 ?>
 
+<main>
 
-  <main>
-    <section id ="jobs-title">
-      <h1>Current Hiring Position Descriptions</h1>
+    <section id="jobs-title">
+        <h1>Current Hiring Position Descriptions</h1>
 
-      <form action="jobs.php" method="get">
-        <label for="search">Search by job title or reference:</label>
+        <form action="jobs.php" method="get">
+            <label for="search">Search by job title or reference:</label>
 
-        <input type="text" id="search" name="search">
+            <input
+                type="text"
+                id="search"
+                name="search"
+                value="<?php
+                    if (isset($_GET['search'])) {
+                        echo $_GET['search'];
+                    }
+                ?>">
 
-        <input type="submit" value="Search">
-      </form>
+            <input type="submit" value="Search">
+        </form>
     </section>
 
-    <aside id ='jobs-info'>
-      <h2>Important Information</h2>
-      <p>All paid positions are full time. Depending on the role, some positions may offer 
-         flexible work arrangements depending on the nature of the role.</p>
-      <p>If the application is successful we will email you with further information.</p>
-      <p>To apply head to the <a href="apply.php">apply</a> page.</p>
+    <aside id="jobs-info">
+        <h2>Important Information</h2>
+
+        <p>
+            All paid positions are full time. Depending on the role,
+            some positions may offer flexible work arrangements
+            depending on the nature of the role.
+        </p>
+
+        <p>
+            If the application is successful we will email you
+            with further information.
+        </p>
+
+        <p>
+            To apply head to the <a href="apply.php">apply</a> page.
+        </p>
     </aside>
 
     <section>
-      <h2 style="text-align: center;">Available Positions:</h2>
+        <h2 style="text-align: center;">Available Positions:</h2>
     </section>
-    
-    <div class ='jobs-grid'>
-      <article id ='social-media-manager' class ='job-block'>
-        <div class="job-title-row">
-          <h3 class="job-heading">
-          <strong>Job Title: </strong>Social Media Manager</h3>
-        <a class="apply-here" href="apply.php"> Apply Here!</a>
-        </div>
 
+    <div class="jobs-grid">
 
-        <p><strong>Reference number: </strong>SCM482</p>
+        <?php
 
-        <p><strong>Salary: </strong>$75,000 - $90,000 per year</p>
+        if (mysqli_num_rows($result) > 0) {
 
-        <h4>Position Description</h4>
-        <p>The Social Media Manager will manage the organisation's online presence and promote 
-          environmental conservation projects, community campaigns, educational resources and 
-          volunteer opportunities across social media platforms.</p>
+            while ($row = mysqli_fetch_assoc($result)) {
 
-        <h4>Reporting Line</h4>
-        <p>Reports to the Communications and Marketing Manager</p>
+                echo "<article class='job-block'>";
 
-        <h4>Key Responsibilities</h4>
-          <ul>
-            <li>Develop and manage social media content across Instagram, Facebook, 
-               LinkedIn and other relevant platforms.</li>
-            <li>Create engaging posts, videos, graphics and stories promoting 
-               conservation activities.</li>
-            <li>Manage the organisation's social media calendar and publishing schedule.</li>
-            <li>Monitor audience engagement, comments and messages.</li>
-            <li>Promote volunteer opportunities, fundraising campaigns and community events.</li>
-            <li>Track social media performance and prepare regular reports.</li>
-            <li>Work with conservation staff to communicate project outcomes and 
-               environmental issues.</li>
-          </ul>
-       
-        <h4>Essential Requirements</h4>
-          <ol>
-            <li>Qualification or relevant experience in marketing, communications or 
-                social media management.</li>
-            <li>Demonstrated experience managing professional social media accounts.</li>
-            <li>Strong written and verbal communication skills.</li>
-            <li>Good understanding of social media platforms and digital content creation.</li>
-            <li>Ability to work independently and meet deadlines.</li>
-            <li>Genuine interest in environmental conservation and sustainability.</li>
-          </ol>
-        
-        <h4>Preferred Skills</h4>
-          <ul>
-            <li>Experience working for a not-for-profit or environmental organisation.</li>
-            <li>Experience with photography, video editing or graphic design.</li>
-            <li>Knowledge of social media analytics and advertising platforms.</li>
-            <li>Experience promoting fundraising or community campaigns.</li>
-          </ul>
-      </article>
+                echo "<div class='job-title-row'>";
 
+                echo "<h3 class='job-heading'><strong>Job Title: </strong>"
+                    . $row['job_title'] . "</h3>";
 
+                echo "<a class='apply-here' href='apply.php'>Apply Here!</a>";
 
-      <article id ='sustainability-educator' class ='job-block'>
-        <div class="job-title-row">
-          <h3 class="job-heading">
-          <strong>Job Title: </strong>Sustainability Educator</h3>
-          <a class="apply-here" href="apply.php"> Apply Here!</a>
-        </div>
-        <p><strong>Reference number: </strong>SUE719</p>
+                echo "</div>";
 
-        <p><strong>Salary: </strong>$70,000 - $85,000 per year</p>
+                echo "<p><strong>Reference number: </strong>"
+                    . $row['job_ref'] . "</p>";
 
-        <h4>Position Description</h4>
-        <p>The Sustainability Educator will develop and deliver educational programs that help 
-            schools, community groups and the public understand sustainability, environmental 
-           protection and responsible resource use.</p>
+                echo "<p><strong>Salary: </strong>"
+                    . $row['salary'] . "</p>";
 
-        <h4>Reporting Line</h4>
-        <p>Reports to the Education and Community Programs Manager</p>
+                echo "<h4>Position Description</h4>";
+                echo "<p>" . $row['description'] . "</p>";
 
-        <h4>Key Responsibilities</h4>
-          <ul>
-            <li>Develop educational workshops and sustainability learning resources.</li>
-            <li>Deliver presentations and activities to schools and community groups.</li>
-            <li>Educate participants about recycling, biodiversity, climate change and 
-               sustainable living.</li>
-            <li>Organise environmental awareness events and community education sessions.</li>
-            <li>Create engaging educational materials for different age groups.</li>
-            <li>Work with teachers, community organisations and conservation staff.</li>
-            <li>Evaluate educational programs and recommend improvements.</li>
-          </ul>
+                echo "<h4>Reporting Line</h4>";
+                echo "<p>Reports to " . $row['reporting_line'] . "</p>";
 
-        <h4>Essential Requirements</h4>
-          <ol>
-            <li>Qualification or experience in environmental education, sustainability, teaching 
-                or a related field.</li>
-            <li>Strong knowledge of environmental and sustainability principles.</li>
-            <li>Excellent presentation and communication skills.</li>
-            <li>Ability to explain environmental topics clearly to different audiences.</li>
-            <li>Strong organisational and time-management skills.</li>
-            <li>Ability to work with schools, community groups and volunteers.</li>
-          </ol>
+                echo "<h4>Key Responsibilities</h4>";
+                echo "<p>" . $row['responsibilities'] . "</p>";
 
-        <h4>Preferred Skills</h4>
-          <ul>
-            <li>Teaching or environmental education experience.</li>
-            <li>Experience developing educational resources or workshops.</li>
-            <li>Knowledge of local Australian ecosystems and conservation issues.</li>
-            <li>First aid certification.</li>
-            <li>Experience working with children or community groups.</li>
-          </ul>
-      </article>
+                echo "<h4>Essential Requirements</h4>";
+                echo "<p>" . $row['essential_requirements'] . "</p>";
 
+                echo "<h4>Preferred Skills</h4>";
+                echo "<p>" . $row['preferred_skills'] . "</p>";
 
+                echo "</article>";
+            }
 
-      <article id ='volunteer-opportunities-coordinator' class ='job-block'>
-        <div class="job-title-row">
-          <h3 class="job-heading">
-          <strong>Job Title: </strong>Volunteer Opportunities Coordinator
-          </h3>
-          <a class="apply-here" href="apply.php"> Apply Here!</a>
-        </div>
+        } else {
 
-        <p><strong>Reference number: </strong>VOC365</p>
+            if (isset($_GET['search'])) {
+                echo "<p>No matching jobs found.</p>";
+            } else {
+                echo "<p>No jobs are currently available.</p>";
+            }
 
-        <p><strong>Salary: </strong>$65,000 - $78,000 per year</p>
+        }
 
-        <h4>Position Description</h4>
-        <p>The Volunteer Opportunities Coordinator will recruit, support 
-          and coordinate volunteers involved in conservation projects, community campaigns, environmental events and 
-          fundraising activities.</p>
+        ?>
 
-        <h4>Reporting Line</h4>
-        <p>Reports to the Volunteer and Community Engagement Manager</p>
+        <figure class="jobs-image">
+            <img
+                src="images/jobs-image.jpg"
+                alt="Volunteers planting trees in a community park.">
+        </figure>
 
-        <h4>Key Responsibilities</h4>
-          <ul>
-            <li>Recruit and welcome new volunteers to the organisation.</li>
-            <li>Coordinate volunteer opportunities across conservation and 
-                community projects.</li>
-            <li>Maintain volunteer records, schedules and contact information.</li>
-            <li>Organise volunteer induction and training sessions.</li>
-            <li>Communicate regularly with volunteers about upcoming activities.</li>
-            <li>Support conservation teams during volunteer events.</li>
-            <li>Recognise volunteer contributions and encourage ongoing participation.</li>
-            <li>Collect feedback from volunteers and improve volunteer programs.</li>
-          </ul>
-
-        <h4>Essential Requirements</h4>
-          <ol>
-            <li>Experience in volunteer coordination, community engagement, 
-                administration or a related field.</li>
-            <li>Excellent interpersonal and communication skills.</li>
-            <li>Strong organisational and scheduling abilities.</li>
-            <li>Ability to work with people from diverse backgrounds.</li>
-            <li>Good computer and administrative skills.</li>
-            <li>Genuine interest in environmental conservation and community participation.</li>
-          </ol>
-
-        <h4>Preferred Skills</h4>
-          <ul>
-            <li>Previous experience working with environmental or 
-                not-for-profit organisations.</li>
-            <li>Experience coordinating community events or volunteer programs.</li>
-            <li>Knowledge of workplace health and safety procedures.</li>
-            <li>Experience using volunteer management databases.</li>
-            <li>First aid certification or experience working in outdoor environments.</li>
-          </ul>
-      </article>
-
-      <figure class ='jobs-image'>
-        <img src="images/jobs-image.jpg" alt="Volunteers planting trees in a community park.">
-
-      </figure>
-       
     </div>
-  
-  </main>
 
-<?php include 'footer.inc'; ?>
+</main>
+
+<?php
+mysqli_close($conn);
+include 'footer.inc';
+?>
