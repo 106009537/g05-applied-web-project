@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `eoi`
 --
 
-CREATE TABLE `eoi` (
+CREATE TABLE IF NOT EXISTS `eoi` (
   `EOInumber` int(11) NOT NULL,
   `jobref` char(6) NOT NULL,
   `fname` varchar(20) NOT NULL,
