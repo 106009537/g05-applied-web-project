@@ -135,7 +135,23 @@ INSERT INTO `jobs` (
     'Experience with environmental organisations.\nExperience coordinating community events.\nKnowledge of workplace health and safety.\nExperience with volunteer databases.\nFirst aid certification.'
 );
 
+-- --------------------------------------------------------
+-- Users table (Task 6 - HR Management)
+-- --------------------------------------------------------
 
+CREATE TABLE IF NOT EXISTS `users` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `username` VARCHAR(50) NOT NULL,
+    `password_hash` VARCHAR(255) NOT NULL,
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `username` (`username`)
+);
+
+-- Default administrator account (admin/admin).
+-- Password is securely hashed using PHP password_hash().
+
+INSERT INTO `users` (`username`, `password_hash`) VALUES
+('admin', '$2y$10$R9Z5g.jhv5yMnrC4EHdLHe9HAXSnzXdKTj72N/duTEvHeA8q40eme');
 
 COMMIT;
 
