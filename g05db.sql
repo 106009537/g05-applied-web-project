@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `eoi` (
-  `EOInumber` int(11) NOT NULL,
+  `EOInumber` int(11) NOT NULL AUTO_INCREMENT,
   `jobref` char(6) NOT NULL,
   `fname` varchar(20) NOT NULL,
   `lname` varchar(20) NOT NULL,
@@ -42,35 +42,55 @@ CREATE TABLE IF NOT EXISTS `eoi` (
   `phone` varchar(12) NOT NULL,
   `skills` text DEFAULT NULL,
   `otherskills` text DEFAULT NULL,
-  `status` enum('New','Current','Final') NOT NULL DEFAULT 'New'
+  `status` enum('New','Current','Final') NOT NULL DEFAULT 'New',
+PRIMARY KEY (`EOInumber`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `eoi`
 --
 
-INSERT INTO `eoi` (`EOInumber`, `jobref`, `fname`, `lname`, `dob`, `gender`, `street`, `suburb`, `state`, `postcode`, `email`, `phone`, `skills`, `otherskills`, `status`) VALUES
-(1, 'ABC123', 'John', 'Smith', '2000-05-15', 'Male', '10 Example Street', 'Melbourne', 'VIC', '3000', 'john@example.com', '0412345678', 'Event Planning, Community Engagement', 'First Aid', 'New');
+INSERT IGNORE INTO `eoi` (`EOInumber`, `jobref`, `fname`, `lname`, `dob`, `gender`, `street`, `suburb`, `state`, `postcode`, `email`, `phone`, `skills`, `otherskills`, `status`) VALUES
+(1, 'ABC123', 'John', 'Smith', '2000-05-15', 'Male', '10 Example Street', 'Melbourne', 'VIC', '3000', 'john@example.com', '0412345678', 'Event Planning, Community Engagement', 'First Aid', 'New'),
 
+(2, 'MARIO1', 'Mario', 'Mario', '1981-09-13', 'Male',
+ '1 Mushroom Road', 'Mushroom Kingdom', 'VIC', '3000',
+ 'mario@example.com', '0400000001',
+ 'Plumbing, Jumping', 'Kart Racing', 'New'),
+
+(3, 'MARIO2', 'Luigi', 'Mario', '1983-07-14', 'Male',
+ '2 Mushroom Road', 'Mushroom Kingdom', 'VIC', '3000',
+ 'luigi@example.com', '0400000002',
+ 'Plumbing, Ghost Hunting', 'High Jumping', 'Current'),
+
+(4, 'MARIO1', 'Peach', 'Toadstool', '1985-04-20', 'Female',
+ '1 Castle Lane', 'Mushroom Kingdom', 'VIC', '3000',
+ 'peach@example.com', '0400000003',
+ 'Leadership, Diplomacy', 'Floating', 'Final'),
+
+(5, 'MARIO2', 'Bowser', 'Koopa', '1978-02-05', 'Male',
+ '1 Lava Castle', 'Koopa Kingdom', 'VIC', '3000',
+ 'bowser@example.com', '0400000004',
+ 'Leadership, Fire Breathing', 'Castle Management', 'New');
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `eoi`
---
-ALTER TABLE `eoi`
-  ADD PRIMARY KEY (`EOInumber`);
+-- -- Indexes for table `eoi`
+-- --
+-- ALTER TABLE `eoi`
+--   ADD PRIMARY KEY (`EOInumber`);
 
---
--- AUTO_INCREMENT for dumped tables
---
+-- --
+-- -- AUTO_INCREMENT for dumped tables
+-- --
 
---
--- AUTO_INCREMENT for table `eoi`
---
-ALTER TABLE `eoi`
-  MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+-- --
+-- -- AUTO_INCREMENT for table `eoi`
+-- --
+-- ALTER TABLE `eoi`
+--   MODIFY `EOInumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 -- --------------------------------------------------------
 -- jobs table (part 5)
@@ -94,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `jobs` (
 -- Sample data for table `jobs`
 -- --------------------------------------------------------
 
-INSERT INTO `jobs` (
+INSERT IGNORE INTO `jobs` (
     `job_ref`,
     `job_title`,
     `salary`,
@@ -150,7 +170,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Default administrator account (admin/admin).
 -- Password is securely hashed using PHP password_hash().
 
-INSERT INTO `users` (`username`, `password_hash`) VALUES
+INSERT IGNORE INTO `users` (`username`, `password_hash`) VALUES
 ('admin', '$2y$10$R9Z5g.jhv5yMnrC4EHdLHe9HAXSnzXdKTj72N/duTEvHeA8q40eme');
 
 COMMIT;
