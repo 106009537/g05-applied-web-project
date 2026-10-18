@@ -4,7 +4,8 @@ $nav_links = [
     'index.php' => 'Home',
     'jobs.php'  => 'Jobs',
     'apply.php' => 'Apply',
-    'about.php' => 'About'
+    'about.php' => 'About',
+    'manage.php' => 'Admin'
 ];
 ?>
 <nav aria-label="Main navigation">
