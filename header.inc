@@ -1,5 +1,6 @@
 <?php
 // header.inc - shared <head> and site header.
+// GenAI acknowledgement: Claude (Anthropic) helped structure the shared include files (header.inc, nav.inc, footer.inc). I tested them and can explain how they work.
 // Pages set $page_title BEFORE including this file.
 $current_page = basename($_SERVER['PHP_SELF']);
 if (!isset($page_title)) { $page_title = "Quokka Recovery Program"; }
