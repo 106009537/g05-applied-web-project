@@ -1,5 +1,6 @@
 <?php
 // nav.inc - site menu. To add or rename a page, edit only this array.
+// GenAI acknowledgement: Claude (Anthropic) helped write the menu loop. I tested it and can explain it.
 $nav_links = [
     'index.php' => 'Home',
     'jobs.php'  => 'Jobs',
