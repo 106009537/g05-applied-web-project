@@ -1,3 +1,4 @@
+<?php // footer.inc - shared footer and closing tags. GenAI acknowledgement: Claude (Anthropic) helped structure this include file. ?>  
   <footer>
     <div class="footer-content">
         <p>&copy; 2026 G05 Quokka Recovery Program</p>
