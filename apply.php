@@ -1,6 +1,6 @@
     <?php
     // GenAI acknowledgement: Claude (Anthropic) helped convert this page to use the shared includes and add the job reference prefill. I tested it and can explain it.
-    // $page_title = "Job Application - Quokka Recovery Program";
+    $page_title = "Job Application - Quokka Recovery Program";
     $page_css = <<<CSS
         .apply-form legend { text-transform: uppercase; letter-spacing: 1px; }
     CSS;
