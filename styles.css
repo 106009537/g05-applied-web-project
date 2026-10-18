@@ -721,3 +721,16 @@ dd {
         white-space: normal;
     }
 }
+
+
+/* =============================================
+       Keyboard focus outline (accessibility)
+============================================= */
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+    outline: 3px solid #C98A17;
+    outline-offset: 2px;
+}
