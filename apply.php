@@ -15,7 +15,7 @@
         Thank you for your interest in joining our team. Please complete the form below to apply for a position with us.
     </p>
     
-        <form id="application-form" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" class="apply-form">
+        <form id="application-form" action="process_eoi.php" method="post" class="apply-form">
 
             <!-- Personal & Position Details -->
             <fieldset class="application-section">
@@ -23,7 +23,7 @@
 
                 <p>
                     <label for="jobref">Job Reference Number:</label>
-                    <input type="text" id="jobref" name="jobref" pattern="[A-Za-z0-9]{6}" maxlength="6" title="Exactly 6 letters or numbers" required="required">
+                    <input type="text" id="jobref" name="jobref" value="<?php echo htmlspecialchars($_GET['jobref'] ?? ''); ?>" pattern="[A-Za-z0-9]{6}" maxlength="6" title="Exactly 6 letters or numbers" required="required">
                 </p>
 
                 <p>
