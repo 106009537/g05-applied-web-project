@@ -224,7 +224,7 @@ INSERT IGNORE INTO `team_contributions` (
     5,
     'Alisha Khokhar',
     2,
-    ''
+    'Task 1: converted the pages to PHP and built the shared header.inc, nav.inc and footer.inc includes so every page uses one copy of the header, menu and footer. Task 4: built process_eoi.php, which validates and sanitises the application form on the server, checks the job reference against the jobs table, saves valid applications to the eoi table with a prepared statement and shows the EOI number. Also added small-screen and keyboard-focus styling for the application form.'
 ),
 (
     6,
