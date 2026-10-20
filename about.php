@@ -55,6 +55,8 @@ include 'header.inc';
           <figure>
               <img src="images/rangers.png"
                     alt="Quokka Recovery Program team" />
+                    <figcaption style="background-color: #cddbd7; color: #313534; padding: 10px; text-align: center; border-radius: 0 0 10px 10px;">
+                        G05 - 404 Found team</figcaption>
           </figure>
 
       </section>
@@ -98,6 +100,9 @@ include 'header.inc';
 
 
           <table>
+            <caption style="background-color: #cddbd7; color: #1B4D3E; font-weight: bold; padding: 15px; text-align: left;">
+                Fun Facts About Our Team
+            </caption>
 
               <thead>
                   <tr>

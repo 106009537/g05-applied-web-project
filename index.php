@@ -7,7 +7,7 @@
 
         <figure>
             <img src="images/main-image.png"
-                    alt="Quokka Recovery Program" />
+            alt="Quokka Recovery Program" />
         </figure>
     </section>
 
@@ -23,7 +23,7 @@
             <article>
                 <h1>Program Overview</h1>
 
-                <h3>What the program is</h2>
+                <h2>What the program is</h2>
                 <p>
                     The Quokka Recovery Program is a conservation initiative focused on protecting quokka populations and supporting their long-term survival through habitat protection, research and community involvement.
                 </p>
@@ -37,11 +37,17 @@
                 <p>
                     The program aims to increase quokka numbers, restore and protect their habitats, reduce threats to their survival and build greater awareness of quokka conservation.
                 </p>
+
+                <h2>Recruitment</h2>
+                <p>
+                    We are always looking for passionate individuals to join our team and help us in our mission to protect quokkas and their habitats. to apply head to our <a href="jobs.php">Job Positions</a> page to see current openings or head to our <a href="apply.php">Application</a> page to apply.
+                </p>
             </article>
 
             <figure>
                 <img src="images/Island_vista.png"
                      alt="Quokka Recovery Program activities" />
+                         <figcaption style="background-color: #cddbd7; color: #313534; padding: 10px; text-align: center; border-radius: 0 0 10px 10px;">>Quokka habitat and landscape</figcaption>
             </figure>
 
         </section>
@@ -56,6 +62,7 @@
                     <figure>
                         <img src="images/increasing_population.png"
                             alt="Quokka population" />
+                                <figcaption style="background-color: #cddbd7; color: #313534; padding: 10px; text-align: center; border-radius: 0 0 10px 10px;">>Supporting Quokka Population recovery</figcaption>
                     </figure>
 
                     <p>
@@ -68,6 +75,7 @@
                     <figure>
                         <img src="images/restoring_habitats.png"
                             alt="Quokka habitat" />
+                                <figcaption style="background-color: #cddbd7; color: #313534; padding: 10px; text-align: center; border-radius: 0 0 10px 10px;">>Restoring and protecting quokka habitats</figcaption>
                     </figure>
 
                     <p>
@@ -163,6 +171,27 @@
             </tr>
         </tbody>
     </table>
+</section>
+
+<section id="group-details"
+    style="width: 97%; max-width: 1400px; margin: 30px auto 0; box-sizing: border-box;">
+
+    <article style="background-color: #cddbd7; color: #313534; padding: 20px 25px; border-radius: 10px; border-left: 5px solid #1E3E27;">
+
+        <h2 style="color: #1B4D3E; margin-top: 0;">
+            Group Information
+        </h2>
+
+        <ul style="margin-bottom: 0;">
+            <li>
+                Group: 404 Found
+                <ul>
+                    <li>Tutorial: Tuesday, 12:30 pm – 2:30 pm</li>
+                </ul>
+            </li>
+        </ul>
+
+    </article>
 </section>
 
 

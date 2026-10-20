@@ -131,6 +131,10 @@ $result = mysqli_query($conn, $sql);
             <img
                 src="images/jobs-image.jpg"
                 alt="Volunteers planting trees in a community park.">
+            <figcaption style="background-color: #cddbd7; color: #313534; 
+                        padding: 10px; text-align: center; 
+                        border-radius: 0 0 10px 10px;">
+                        Supporting quokka population recovery</figcaption>
         </figure>
 
     </div>
