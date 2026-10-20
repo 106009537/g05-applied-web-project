@@ -24,11 +24,18 @@ https://g05-applied-web-project.atlassian.net?continue=https%3A%2F%2Fg05-applied
 
 
 ## Project Structure
-- `index.html` - Home page
-- `jobs.html` - Job listings
-- `apply.html` - Application form
-- `about.html` - About the team
+- `index.php` - Home page
+- `jobs.php` - Job listings
+- `apply.php` - Application form
+- `about.php` - About the team
 - `styles.css` - Main stylesheet
+- `g0bdb.sql` - Main SQL database 
+- `header.inc` - Global header
+- `footer.inc` - Global footer
+- `manage.php` - Management page
+- `process_eoi.php` - Login process
+- `setup_admin_acc.php` - One time admin setup
+
 
 ## GenAI Acknowledgement [We'll add any tools/prompts used, per unit requirements]
 1. Used Claude to format above Group Contributions Table
