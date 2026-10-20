@@ -23,17 +23,17 @@
             <article>
                 <h1>Program Overview</h1>
 
-                <h3>What the program is</h3>
+                <h3>What the program is</h2>
                 <p>
                     The Quokka Recovery Program is a conservation initiative focused on protecting quokka populations and supporting their long-term survival through habitat protection, research and community involvement.
                 </p>
 
-                <h3>Where it operates</h3>
+                <h2>Where it operates</h2>
                 <p>
                     The program operates in areas of Western Australia where quokkas live, with a focus on protecting important habitats and supporting healthy wild populations.
                 </p>
 
-                <h3>What it aims to achieve</h3>
+                <h2>What it aims to achieve</h2>
                 <p>
                     The program aims to increase quokka numbers, restore and protect their habitats, reduce threats to their survival and build greater awareness of quokka conservation.
                 </p>
