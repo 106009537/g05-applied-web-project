@@ -1,6 +1,10 @@
 <?php
 $page_title = "About the Team - Quokka Recovery Program";
+include 'settings.php';
+$conn = mysqli_connect($host, $user, $pwd, $sql_db);
 include 'header.inc';
+
+
 ?>
 
   <main>

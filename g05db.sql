@@ -174,8 +174,6 @@ INSERT IGNORE INTO `users` (`username`, `password_hash`) VALUES
 ('admin', '$2y$10$R9Z5g.jhv5yMnrC4EHdLHe9HAXSnzXdKTj72N/duTEvHeA8q40eme');
 
 
-
-
 -- --------------------------------------------------------
 -- Team contributions (Task 7)
 -- --------------------------------------------------------
@@ -202,23 +200,39 @@ INSERT IGNORE INTO `team_contributions` (
     1,
     'Eddy Lemos',
     1,
-    'Part 1 -Homepage, About Us HTML and CSS; header and footer HTML and CSS; Jira, GitHub repository, README and GitHub Pages setup; homepage images and background styling.
-    Part 2 - '
+    'Homepage, About Us HTML and CSS; header and footer HTML and CSS; Jira, GitHub repository, README and GitHub Pages setup; homepage images and background styling.'
 ),
 (
     2,
     'Alisha Khokhar',
     1,
-    'Part 1 - Created apply.php with the application form, required fields, validation patterns and fieldsets; fixed HTML structure; styled the form with Flexbox; resolved a Git merge conflict in styles.css.
-    Part 2 - '
+    'Created apply.php with the application form, required fields, validation patterns and fieldsets; fixed HTML structure; styled the form with Flexbox; resolved a Git merge conflict in styles.css.'
 ),
 (
     3,
     'Cameron Yardy',
     1,
-    'Part 1 - Created the jobs page and applied site-wide CSS themes and page-specific CSS.
-    Part 2 - '
+    'Created the jobs page and applied site-wide CSS themes and page-specific CSS.'
+),
+(
+    4,
+    'Eddy Lemos',
+    2,
+    'Project 2 contributions here.'
+),
+(
+    5,
+    'Alisha Khokhar',
+    2,
+    'Project 2 contributions here.'
+),
+(
+    6,
+    'Cameron Yardy',
+    2,
+    'Project 2 contributions here.'
 );
+
 
 
 
