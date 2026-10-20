@@ -230,7 +230,7 @@ INSERT IGNORE INTO `team_contributions` (
     6,
     'Cameron Yardy',
     2,
-    'Created Settings.php with host, user, password and database name, Created a jobs table that is dynamic with php and retrieves data from the database, Created a login page with validation and error handling, Created a logout page that destroys the session and redirects to the login page, Created an admin page that displays all job applications in a table format, Created a delete functionality that allows the admin to delete job applications from the database, configured the about.php file to make the contributions table dynamic and retrieve data from the database.'
+    'Created Settings.php, Created a dynamic jobs that retireves from the databse, configured the about.php file to make the contributions table dynamic and retrieve data from the database. Fixed mistakes from Part 1.'
 );
 
 
