@@ -218,13 +218,13 @@ INSERT IGNORE INTO `team_contributions` (
     4,
     'Eddy Lemos',
     2,
-    'Project 2 contributions here.'
+    ''
 ),
 (
     5,
     'Alisha Khokhar',
     2,
-    'Project 2 contributions here.'
+    ''
 ),
 (
     6,
