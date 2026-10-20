@@ -16,20 +16,33 @@ include 'header.inc';
               <h2>Contributions</h2>
 
               <dl>
-                  <dt><strong>Eddy Lemos:</strong></dt>
-                  <dd>
-                      Homepage, About US html and css; Header, Footer html and css; Jira, Github repo, readme, and Github pages setup; generation and css management of Hompage images and background.
-                  </dd>
+                <?php
+                $members_query = "SELECT DISTINCT member_name
+                                FROM team_contributions
+                                ORDER BY contribution_id";
 
-                  <dt><strong>Alisha Khokhar:</strong></dt>
-                  <dd>
-                      Built the Job Application page (apply.php) — created the full form with all required fields, validation patterns, and fieldsets; fixed structural HTML errors; added Flexbox layout styling for the form; resolved a Git merge conflict in the shared styles.css.
-                  </dd>
+                $members_result = mysqli_query($conn, $members_query);
 
-                  <dt><strong>Cameron Yardy:</strong></dt>
-                  <dd>
-                      Jobs page, Applying Site Wide CSS themes, Applying Page Specific CSS
-                  </dd>
+                while ($member = mysqli_fetch_assoc($members_result)) {
+                    echo "<dt><strong>" . $member['member_name'] . ":</strong></dt>";
+
+                    $member_name = $member['member_name'];
+
+                    $contributions_query = "SELECT * FROM team_contributions
+                                            WHERE member_name = '$member_name'
+                                            ORDER BY project_number";
+
+                    $contributions_result = mysqli_query($conn, $contributions_query);
+
+                    while ($contribution = mysqli_fetch_assoc($contributions_result)) {
+                        echo "<dd><strong>Project "
+                            . $contribution['project_number']
+                            . ":</strong> "
+                            . $contribution['contribution_details']
+                            . "</dd>";
+                    }
+                }
+                ?>
               </dl>
 
           </article>

@@ -173,6 +173,56 @@ CREATE TABLE IF NOT EXISTS `users` (
 INSERT IGNORE INTO `users` (`username`, `password_hash`) VALUES
 ('admin', '$2y$10$R9Z5g.jhv5yMnrC4EHdLHe9HAXSnzXdKTj72N/duTEvHeA8q40eme');
 
+
+
+
+-- --------------------------------------------------------
+-- Team contributions (Task 7)
+-- --------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS `team_contributions` (
+    `contribution_id` INT NOT NULL AUTO_INCREMENT,
+    `member_name` VARCHAR(100) NOT NULL,
+    `project_number` INT NOT NULL,
+    `contribution_details` TEXT NOT NULL,
+    PRIMARY KEY (`contribution_id`)
+);
+
+-- --------------------------------------------------------
+-- Project 1/2 contributions
+-- --------------------------------------------------------
+
+INSERT IGNORE INTO `team_contributions` (
+    `contribution_id`,
+    `member_name`,
+    `project_number`,
+    `contribution_details`
+) VALUES
+(
+    1,
+    'Eddy Lemos',
+    1,
+    'Part 1 -Homepage, About Us HTML and CSS; header and footer HTML and CSS; Jira, GitHub repository, README and GitHub Pages setup; homepage images and background styling.
+    Part 2 - '
+),
+(
+    2,
+    'Alisha Khokhar',
+    1,
+    'Part 1 - Created apply.php with the application form, required fields, validation patterns and fieldsets; fixed HTML structure; styled the form with Flexbox; resolved a Git merge conflict in styles.css.
+    Part 2 - '
+),
+(
+    3,
+    'Cameron Yardy',
+    1,
+    'Part 1 - Created the jobs page and applied site-wide CSS themes and page-specific CSS.
+    Part 2 - '
+);
+
+
+
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
