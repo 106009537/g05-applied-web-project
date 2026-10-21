@@ -200,7 +200,7 @@ INSERT IGNORE INTO `team_contributions` (
     1,
     'Eddy Lemos',
     1,
-    'Homepage, About Us HTML and CSS; header and footer HTML and CSS; Jira, GitHub repository, README and GitHub Pages setup; homepage images and background styling.'
+    'Homepage, About Us HTML and CSS; header and footer HTML and CSS; Jira, GitHub repository, README and GitHub Pages setup; homepage images and background styling; Created EOI and users database tables, login.php for admin authentication, and manage.php for searching, sorting, deleting and updating EOI records, with sessions restricting access to authorised users. Used AI to create an admin account setup script that generates and stores a hashed password and security features in manage.php.'
 ),
 (
     2,
