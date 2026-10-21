@@ -94,6 +94,7 @@ $first = $_GET["first"] ?? "";
 $last = $_GET["last"] ?? "";
 
 $ref = is_string($ref) ? strtoupper(trim($ref)) : "";
+$refLike = "%" . $ref . "%";
 $first = is_string($first) ? "%" . trim($first) . "%" : "%";
 $last = is_string($last) ? "%" . trim($last) . "%" : "%";
 
@@ -119,13 +120,13 @@ if (!array_key_exists($sort, $sorts)) {
 // Retrieve matching EOIs using a prepared SQL statement.
 // LIKE allows partial first and last name searches.
 $sql = "SELECT * FROM eoi
-        WHERE (? = '' OR jobref = ?)
+        WHERE (? = '' OR jobref LIKE ?)
         AND fname LIKE ?
         AND lname LIKE ?
         ORDER BY $sort";
 
 $stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, "ssss", $ref, $ref, $first, $last);
+mysqli_stmt_bind_param($stmt, "ssss", $ref, $refLike, $first, $last);
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 
