@@ -234,6 +234,114 @@ INSERT IGNORE INTO `team_contributions` (
 );
 
 
+-- --------------------------------------------------------
+-- Team quotes (Task 7)
+-- --------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS `team_quotes` (
+    `quote_id` INT NOT NULL AUTO_INCREMENT,
+    `member_name` VARCHAR(100) NOT NULL,
+    `language` VARCHAR(50) NOT NULL,
+    `quote_text` TEXT NOT NULL,
+    `english_translation` TEXT NOT NULL,
+    PRIMARY KEY (`quote_id`)
+);
+
+-- --------------------------------------------------------
+-- Favourite non-English quotes
+-- --------------------------------------------------------
+
+INSERT IGNORE INTO `team_quotes` (
+    `quote_id`,
+    `member_name`,
+    `language`,
+    `quote_text`,
+    `english_translation`
+) VALUES
+(
+    1,
+    'Eddy Lemos',
+    'Roman',
+    'Dum spiro spero',
+    'While I breathe I hope'
+),
+(
+    2,
+    'Alisha Khokhar',
+    'French',
+    'L''esprit est toujours la dupe du cœur',
+    'The intellect is always the fool of the heart'
+),
+(
+    3,
+    'Cam Yardy',
+    'Irish',
+    'Is fearr Gaeilge briste, ná Béarla clíste',
+    'Better broken Irish than clever English'
+);
+
+
+-- --------------------------------------------------------
+-- Team fun facts (Task 7)
+-- --------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS `team_fun_facts` (
+    `fact_id` INT NOT NULL AUTO_INCREMENT,
+    `member_name` VARCHAR(100) NOT NULL,
+    `fact_details` TEXT NOT NULL,
+    PRIMARY KEY (`fact_id`)
+);
+
+-- --------------------------------------------------------
+-- Fun facts about the team
+-- --------------------------------------------------------
+
+INSERT IGNORE INTO `team_fun_facts` (
+    `fact_id`,
+    `member_name`,
+    `fact_details`
+) VALUES
+(
+    1,
+    'Eddy Lemos',
+    'I have been playing guitar for 15 years'
+),
+(
+    2,
+    'Eddy Lemos',
+    'I am a Japanese speaker and lived there for 3 years'
+),
+(
+    3,
+    'Eddy Lemos',
+    'Canadian but moved to Aus at 18'
+),
+(
+    4,
+    'Eddy Lemos',
+    'I also like cooking and weightlifting'
+),
+(
+    5,
+    'Eddy Lemos',
+    'Favourite authors: Jules Verne, Yukio Mishima'
+),
+(
+    6,
+    'Eddy Lemos',
+    'Favourite games: Halo, Bioshock, Portal'
+),
+(
+    7,
+    'Alisha Khokhar',
+    'I love playing games, and my favourite game or game series is Resident Evil'
+),
+(
+    8,
+    'Cam Yardy',
+    'Before going to Swinburne I did a gap year working the snow season at Mt Hotham'
+);
+
 
 
 
