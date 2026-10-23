@@ -11,7 +11,7 @@ if (!isset($page_title)) { $page_title = "Quokka Recovery Program"; }
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo htmlspecialchars($page_title); ?></title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/styles.css">
 <?php if (!empty($page_css)): ?>
   <style>
 <?php echo $page_css; ?>
