@@ -47,3 +47,4 @@ https://g05-applied-web-project.atlassian.net?continue=https%3A%2F%2Fg05-applied
 6. Used ChatGPT to generate text explanations about the company on index.
 7. Used ChatGPT to help fix issues flagged by Accessibility Checker
 8. Used ChatGPT to "make all of About.php's articles Dynamic from g05db.sql"
+9. Used ChatGPT to check work agiasnt Rubric, prompt was given all code and all of the rubric
