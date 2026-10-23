@@ -47,7 +47,7 @@
             <figure>
                 <img src="images/Island_vista.png"
                      alt="Quokka Recovery Program activities" />
-                         <figcaption style="background-color: #cddbd7; color: #313534; padding: 10px; text-align: center; border-radius: 0 0 10px 10px;">>Quokka habitat and landscape</figcaption>
+                         <figcaption style="background-color: #cddbd7; color: #313534; padding: 10px; text-align: center; border-radius: 0 0 10px 10px;">Quokka habitat and landscape</figcaption>
             </figure>
 
         </section>
@@ -62,7 +62,7 @@
                     <figure>
                         <img src="images/increasing_population.png"
                             alt="Quokka population" />
-                                <figcaption style="background-color: #cddbd7; color: #313534; padding: 10px; text-align: center; border-radius: 0 0 10px 10px;">>Supporting Quokka Population recovery</figcaption>
+                                <figcaption style="background-color: #cddbd7; color: #313534; padding: 10px; text-align: center; border-radius: 0 0 10px 10px;">Supporting Quokka Population recovery</figcaption>
                     </figure>
 
                     <p>
@@ -75,7 +75,7 @@
                     <figure>
                         <img src="images/restoring_habitats.png"
                             alt="Quokka habitat" />
-                                <figcaption style="background-color: #cddbd7; color: #313534; padding: 10px; text-align: center; border-radius: 0 0 10px 10px;">>Restoring and protecting quokka habitats</figcaption>
+                                <figcaption style="background-color: #cddbd7; color: #313534; padding: 10px; text-align: center; border-radius: 0 0 10px 10px;">Restoring and protecting quokka habitats</figcaption>
                     </figure>
 
                     <p>
