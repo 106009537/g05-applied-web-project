@@ -19,7 +19,7 @@ https://g05-applied-web-project.atlassian.net?continue=https%3A%2F%2Fg05-applied
 | Alisha Khokhar | Built the Job Application page (apply.html) — created the full form with all required fields and validation patterns; fixed structural HTML errors; added Flexbox layout styling for the form; resolved a Git merge conflict in the shared styles.css. | 
 | Sebastian Kesuma | Left the project on day one
 | Alisha Khokhar |Apply page html and css.
-| Cameron Yardy | CSS Styling, Jobs.html, Page Specific style Requirements, Created Settings.php, Created a dynamic jobs that retireves from the databse, configured the about.php file to make the contributions table dynamic and retrieve data from the database. Fixed mistakes from Part 1.
+| Cameron Yardy | CSS Styling, Jobs.html, Page Specific style Requirements, Created Settings.php, Created a dynamic jobs that retireves from the databse, configured the about.php file to make the about page tables dynamic and retrieve data from the database. Fixed mistakes from Part 1.
  |
 
 
@@ -46,3 +46,4 @@ https://g05-applied-web-project.atlassian.net?continue=https%3A%2F%2Fg05-applied
 5. Used ChatGPT to generate all images and logos in index, about us and header.
 6. Used ChatGPT to generate text explanations about the company on index.
 7. Used ChatGPT to help fix issues flagged by Accessibility Checker
+8. Used ChatGPT to "make all of About.php's articles Dynamic from g05db.sql"
