@@ -87,7 +87,9 @@ $result = mysqli_query($conn, $sql);
                 echo "<h3 class='job-heading'><strong>Job Title: </strong>"
                     . $row['job_title'] . "</h3>";
 
-                echo "<a class='apply-here' href='apply.php'>Apply Here!</a>";
+                echo "<a class='apply-here' href='apply.php?jobref="
+                . $row['job_ref']
+                . "'>Apply Here!</a>";
 
                 echo "</div>";
 
