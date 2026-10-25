@@ -93,10 +93,12 @@ $ref = $_GET["ref"] ?? "";
 $first = $_GET["first"] ?? "";
 $last = $_GET["last"] ?? "";
 
+// Add wildcards to allow partial matching for all three fields.
 $ref = is_string($ref) ? strtoupper(trim($ref)) : "";
 $refLike = "%" . $ref . "%";
-$first = is_string($first) ? "%" . trim($first) . "%" : "%";
-$last = is_string($last) ? "%" . trim($last) . "%" : "%";
+
+$firstLike = is_string($first) ? "%" . trim($first) . "%" : "%";
+$lastLike = is_string($last) ? "%" . trim($last) . "%" : "%";
 
 
 // Database column names => Display labels.
@@ -118,15 +120,15 @@ if (!array_key_exists($sort, $sorts)) {
 
 
 // Retrieve matching EOIs using a prepared SQL statement.
-// LIKE allows partial first and last name searches.
+// LIKE allows partial matching for job references and names.
 $sql = "SELECT * FROM eoi
-        WHERE (? = '' OR jobref LIKE ?)
+        WHERE jobref LIKE ?
         AND fname LIKE ?
         AND lname LIKE ?
         ORDER BY $sort";
 
 $stmt = mysqli_prepare($conn, $sql);
-mysqli_stmt_bind_param($stmt, "ssss", $ref, $refLike, $first, $last);
+mysqli_stmt_bind_param($stmt, "sss", $refLike, $firstLike, $lastLike);
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 
