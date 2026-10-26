@@ -625,6 +625,7 @@ dd {
 
 .application-section input[type="text"],
 .application-section input[type="email"],
+.application-section input[type="tel"],
 .application-section select,
 .application-section textarea {
     padding: 10px;
